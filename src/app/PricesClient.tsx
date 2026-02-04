@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Candles from "./Candles";
 import styles from "./PricesClient.module.css";
 
 type QuoteItem = {
@@ -55,6 +56,14 @@ export default function PricesClient() {
   }, []);
 
   const rows = useMemo(() => items, [items]);
+  const [active, setActive] = useState<string>("NVDA");
+
+  // default selection once data arrives
+  useEffect(() => {
+    if (!items.length) return;
+    if (items.some((x) => x.symbol === active)) return;
+    setActive(items[0]!.symbol);
+  }, [items, active]);
 
   return (
     <div className={styles.wrap}>
@@ -62,17 +71,13 @@ export default function PricesClient() {
         <header className={styles.header}>
           <div>
             <h1 className={styles.title}>Portfolio Grow</h1>
-            <div className={styles.subtitle}>
-              Prices • US equities + XAU/USD • data via Stooq
-            </div>
+            <div className={styles.subtitle}>Prices • US equities + XAU/USD • data via Stooq</div>
           </div>
           <div className={styles.actions}>
             <button className={styles.button} onClick={load}>
               Refresh
             </button>
-            <div className={styles.updated}>
-              {lastUpdated ? `Updated ${lastUpdated.toLocaleTimeString()}` : "—"}
-            </div>
+            <div className={styles.updated}>{lastUpdated ? `Updated ${lastUpdated.toLocaleTimeString()}` : "—"}</div>
           </div>
         </header>
 
@@ -107,8 +112,13 @@ export default function PricesClient() {
                     const up = (r.changePct ?? 0) >= 0;
                     // CN-style: red up, green down
                     const badgeClass = r.changePct === null ? styles.badgeFlat : up ? styles.badgeUp : styles.badgeDown;
+                    const selected = r.symbol === active;
                     return (
-                      <tr key={r.symbol}>
+                      <tr
+                        key={r.symbol}
+                        onClick={() => setActive(r.symbol)}
+                        style={{ cursor: "pointer", background: selected ? "rgba(255,255,255,0.05)" : undefined }}
+                      >
                         <td className={`${styles.cell} ${styles.symbol}`}>{r.symbol}</td>
                         <td className={`${styles.cell} ${styles.name}`}>{r.name}</td>
                         <td className={`${styles.cell} ${styles.right}`}>{fmtPrice(r.price)}</td>
@@ -123,6 +133,19 @@ export default function PricesClient() {
                 )}
               </tbody>
             </table>
+          </div>
+
+          {/* Daily candles for selected symbol */}
+          <div style={{ padding: 14, borderTop: "1px solid rgba(255,255,255,0.10)" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
+              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.82)" }}>
+                {active} — 日K线
+              </div>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)" }}>
+                点击上方表格行可切换标的
+              </div>
+            </div>
+            <Candles symbol={active} />
           </div>
         </section>
 
