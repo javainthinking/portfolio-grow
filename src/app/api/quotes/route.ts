@@ -18,6 +18,7 @@ const ASSETS = [
   { symbol: "TSLA", name: "Tesla", stooq: "tsla.us", currency: "USD" },
   { symbol: "PSTG", name: "Pure Storage", stooq: "pstg.us", currency: "USD" },
   { symbol: "FSLR", name: "First Solar", stooq: "fslr.us", currency: "USD" },
+  { symbol: "SOXL", name: "Direxion Daily Semiconductor Bull 3X", stooq: "soxl.us", currency: "USD" },
   { symbol: "XAUUSD", name: "Gold / USD", stooq: "xauusd", currency: "USD" },
 ] as const;
 
