@@ -19,10 +19,21 @@
     "sections": {
       "watch": "Watch",
       "stocks": "Stocks",
-      "ark": "Cathie Wood (ARKK)"
+      "ark": "Cathie Wood (ARKK)",
+      "pelosi": "Pelosi (estimated)"
     },
     "asOf": "As of {date}",
     "arkNote": "Holdings are fetched from ARK's published daily ARKK holdings file.",
+
+    "estimated": "ESTIMATED",
+    "pelosiDisclaimerTitle": "Estimated holdings (inferred)",
+    "pelosiDisclaimer": "These are NOT official real-time holdings. We infer a rough net notional exposure from disclosed transaction amount ranges.",
+    "logic": "Logic",
+    "pelosiLogic": "For each disclosed trade, we convert the USD amount range into a midpoint (e.g. 250,001–500,000 -> 375,000; Over X -> 1.25×X). Purchases add notional (+), sales subtract (-). We then aggregate by ticker. Options are treated as notional exposure only.",
+    "netNotional": "Net notional",
+    "lastTx": "Last tx",
+    "source": "Source",
+
     "cost": "Cost",
     "pnl": "P&L",
     "totalPnl": "Total P&L",

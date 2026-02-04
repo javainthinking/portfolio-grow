@@ -19,10 +19,21 @@
     "sections": {
       "watch": "关注",
       "stocks": "股票",
-      "ark": "木头姐（ARKK）"
+      "ark": "木头姐（ARKK）",
+      "pelosi": "佩洛西（推算）"
     },
     "asOf": "截至 {date}",
     "arkNote": "持仓数据来自 ARK 官方每日发布的 ARKK holdings 文件。",
+
+    "estimated": "推算",
+    "pelosiDisclaimerTitle": "推算持仓（非官方）",
+    "pelosiDisclaimer": "这不是官方实时持仓。我们仅根据公开披露的交易金额区间，推算一个“净名义敞口”。",
+    "logic": "推算逻辑",
+    "pelosiLogic": "对每条披露交易：把金额区间换算成中位数（如 250,001–500,000 -> 375,000；Over X -> 1.25×X）；买入记为 +，卖出记为 -；按 ticker 汇总。期权仅按名义敞口计入。",
+    "netNotional": "净名义敞口",
+    "lastTx": "最近交易",
+    "source": "来源",
+
     "cost": "成本",
     "pnl": "盈亏",
     "totalPnl": "总盈亏",

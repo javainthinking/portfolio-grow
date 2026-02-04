@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import Candles from "./Candles";
 import ArkkHoldings from "./ArkkHoldings";
+import PelosiEstimate from "./PelosiEstimate";
 import styles from "./PricesClient.module.css";
 
 type QuoteItem = {
@@ -304,6 +305,7 @@ export default function PricesClient() {
         </section>
 
         <ArkkHoldings />
+        <PelosiEstimate />
 
         {/* Stocks */}
         <section className={styles.grid} style={{ marginTop: 14 }}>
