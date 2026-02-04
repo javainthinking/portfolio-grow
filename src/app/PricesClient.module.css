@@ -163,12 +163,18 @@
     background: rgba(255, 255, 255, 0.03);
   }
 
+  /* Compact mode on mobile: show only key fields */
+  .tbody td[data-label="CCY"],
+  .tbody td[data-label="State"] {
+    display: none;
+  }
+
   .cell {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 12px;
-    padding: 10px 14px;
+    padding: 9px 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
   }
 
