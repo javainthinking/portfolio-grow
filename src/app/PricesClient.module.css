@@ -146,6 +146,86 @@
   overflow: hidden;
 }
 
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sectionTitle {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+}
+
+.totalPnl {
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+
+.totalUp {
+  color: var(--pg-red);
+}
+
+.totalDown {
+  color: var(--pg-green);
+}
+
+.costInput {
+  width: 92px;
+  padding: 7px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 700;
+  font-size: 13px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.costInput:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.expandMeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 10px 14px 0;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.metaLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.62);
+  font-weight: 700;
+}
+
+.metaValue {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .tableWrap {
   overflow-x: auto;
 }
@@ -233,6 +313,12 @@
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
     background: rgba(255, 255, 255, 0.02);
+  }
+
+  /* hide cost/pnl columns on mobile list (available in expanded view) */
+  .tbody td[data-label="Cost"],
+  .tbody td[data-label="P&L"] {
+    display: none;
   }
 
   .tbody tr:hover {

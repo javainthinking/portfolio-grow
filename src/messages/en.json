@@ -16,6 +16,13 @@
     "klineError": "Candles failed: {error}",
     "klineHelp": "Scroll to zoom; drag to pan; pinch on mobile.",
     "days": "Daily candles",
+    "sections": {
+      "watch": "Watch",
+      "stocks": "Stocks"
+    },
+    "cost": "Cost",
+    "pnl": "P&L",
+    "totalPnl": "Total P&L",
     "market": {
       "open": "TRADING",
       "closed": "CLOSED"

@@ -54,6 +54,16 @@ function fmtPct(v: number | null) {
   return `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
 }
 
+function fmtSigned(v: number | null, digits = 2) {
+  if (v === null || Number.isNaN(v)) return "—";
+  const s = v >= 0 ? "+" : "";
+  return s + new Intl.NumberFormat(undefined, { maximumFractionDigits: digits }).format(v);
+}
+
+function isFiniteNum(v: unknown): v is number {
+  return typeof v === "number" && Number.isFinite(v);
+}
+
 export default function PricesClient() {
   const t = useTranslations("app");
   const locale = useLocale();
@@ -65,6 +75,8 @@ export default function PricesClient() {
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [market, setMarket] = useState(() => usMarketStatusNow());
+
+  const [costs, setCosts] = useState<Record<string, number>>({});
 
   async function load() {
     try {
@@ -81,6 +93,24 @@ export default function PricesClient() {
     }
   }
 
+  // load persisted costs
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("pg_costs_v1");
+      if (!raw) return;
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object") {
+        const next: Record<string, number> = {};
+        for (const [k, v] of Object.entries(parsed)) {
+          if (typeof v === "number" && Number.isFinite(v)) next[k] = v;
+        }
+        setCosts(next);
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
   useEffect(() => {
     load();
     const id = setInterval(load, 30_000);
@@ -92,6 +122,11 @@ export default function PricesClient() {
   }, []);
 
   const rows = useMemo(() => items, [items]);
+
+  const PUBLIC = useMemo(() => new Set(["NDX", "XAUUSD"]), []);
+  const publicRows = useMemo(() => rows.filter((r) => PUBLIC.has(r.symbol)), [rows, PUBLIC]);
+  const stockRows = useMemo(() => rows.filter((r) => !PUBLIC.has(r.symbol)), [rows, PUBLIC]);
+
   const [active, setActive] = useState<string | null>("NVDA");
 
   // default selection once data arrives
@@ -102,6 +137,39 @@ export default function PricesClient() {
   }, [items, active]);
 
   const toggle = (sym: string) => setActive((cur) => (cur === sym ? null : sym));
+
+  // set default costs for stocks when we first get prices
+  useEffect(() => {
+    if (!stockRows.length) return;
+    setCosts((prev) => {
+      let changed = false;
+      const next = { ...prev };
+      for (const r of stockRows) {
+        if (next[r.symbol] == null && isFiniteNum(r.price)) {
+          next[r.symbol] = r.price;
+          changed = true;
+        }
+      }
+      if (changed) {
+        try {
+          localStorage.setItem("pg_costs_v1", JSON.stringify(next));
+        } catch {
+          // ignore
+        }
+      }
+      return changed ? next : prev;
+    });
+  }, [stockRows]);
+
+  const totalPnl = useMemo(() => {
+    let sum = 0;
+    for (const r of stockRows) {
+      const cost = costs[r.symbol];
+      if (!isFiniteNum(r.price) || !isFiniteNum(cost)) continue;
+      sum += r.price - cost;
+    }
+    return sum;
+  }, [stockRows, costs]);
 
   return (
     <div className={styles.wrap}>
@@ -155,7 +223,12 @@ export default function PricesClient() {
           </div>
         </header>
 
+        {/* Public / common watch */}
         <section className={styles.grid}>
+          <div className={styles.sectionHead}>
+            <div className={styles.sectionTitle}>{t("sections.watch")}</div>
+          </div>
+
           {loading ? (
             <div className={styles.banner}>{t("loading")}</div>
           ) : error ? (
@@ -167,22 +240,19 @@ export default function PricesClient() {
               <thead className={styles.thead}>
                 <tr>
                   <th>Symbol</th>
-                  <th>Name</th>
                   <th className={styles.right}>Price</th>
                   <th className={styles.right}>Chg%</th>
-                  <th>CCY</th>
-                  <th>State</th>
                 </tr>
               </thead>
               <tbody className={styles.tbody}>
-                {!loading && !error && rows.length === 0 ? (
+                {!loading && !error && publicRows.length === 0 ? (
                   <tr>
-                    <td className={styles.cell} colSpan={6}>
+                    <td className={styles.cell} colSpan={3}>
                       {t("noData")}
                     </td>
                   </tr>
                 ) : (
-                  rows.flatMap((r) => {
+                  publicRows.flatMap((r) => {
                     const up = (r.changePct ?? 0) >= 0;
                     const badgeClass = r.changePct === null ? styles.badgeFlat : up ? styles.badgeUp : styles.badgeDown;
                     const open = r.symbol === active;
@@ -200,8 +270,85 @@ export default function PricesClient() {
                             <div className={styles.symName}>{r.name}</div>
                           </div>
                         </td>
-                        <td className={`${styles.cell} ${styles.name}`} data-label="Name">
-                          {r.name}
+                        <td className={`${styles.cell} ${styles.right}`} data-label="Price">
+                          {fmtPrice(r.price)}
+                        </td>
+                        <td className={`${styles.cell} ${styles.right}`} data-label="Chg%">
+                          <span className={`${styles.badge} ${badgeClass}`}>{fmtPct(r.changePct)}</span>
+                        </td>
+                      </tr>
+                    );
+
+                    const expanded = open ? (
+                      <tr key={`${r.symbol}__expanded`} className={styles.expandRow}>
+                        <td className={styles.expandCell} colSpan={3}>
+                          <div className={styles.expandHeader}>
+                            <div className={styles.expandTitle}>{t("klineTitle", { symbol: r.symbol })}</div>
+                            <div className={styles.expandHint}>{t("klineHint")}</div>
+                          </div>
+                          <div className={styles.expandCard}>
+                            <Candles symbol={r.symbol} />
+                          </div>
+                        </td>
+                      </tr>
+                    ) : null;
+
+                    return expanded ? [baseRow, expanded] : [baseRow];
+                  })
+                )}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Stocks */}
+        <section className={styles.grid} style={{ marginTop: 14 }}>
+          <div className={styles.sectionHead}>
+            <div className={styles.sectionTitle}>{t("sections.stocks")}</div>
+            <div className={`${styles.totalPnl} ${totalPnl >= 0 ? styles.totalUp : styles.totalDown}`}>
+              {t("totalPnl")}: {fmtSigned(totalPnl, 2)}
+            </div>
+          </div>
+
+          <div className={styles.tableWrap}>
+            <table className={styles.table}>
+              <thead className={styles.thead}>
+                <tr>
+                  <th>Symbol</th>
+                  <th className={styles.right}>Price</th>
+                  <th className={styles.right}>Chg%</th>
+                  <th className={styles.right}>{t("cost")}</th>
+                  <th className={styles.right}>{t("pnl")}</th>
+                </tr>
+              </thead>
+              <tbody className={styles.tbody}>
+                {!loading && !error && stockRows.length === 0 ? (
+                  <tr>
+                    <td className={styles.cell} colSpan={5}>
+                      {t("noData")}
+                    </td>
+                  </tr>
+                ) : (
+                  stockRows.flatMap((r) => {
+                    const up = (r.changePct ?? 0) >= 0;
+                    const badgeClass = r.changePct === null ? styles.badgeFlat : up ? styles.badgeUp : styles.badgeDown;
+                    const open = r.symbol === active;
+                    const cost = costs[r.symbol];
+                    const pnl = isFiniteNum(r.price) && isFiniteNum(cost) ? r.price - cost : null;
+                    const pnlCls = pnl === null ? styles.badgeFlat : pnl >= 0 ? styles.badgeUp : styles.badgeDown;
+
+                    const baseRow = (
+                      <tr
+                        key={r.symbol}
+                        onClick={() => toggle(r.symbol)}
+                        className={open ? styles.rowOpen : undefined}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <td className={`${styles.cell} ${styles.symbol}`} data-label="Symbol">
+                          <div className={styles.symBlock}>
+                            <div className={styles.symTicker}>{r.symbol}</div>
+                            <div className={styles.symName}>{r.name}</div>
+                          </div>
                         </td>
                         <td className={`${styles.cell} ${styles.right}`} data-label="Price">
                           {fmtPrice(r.price)}
@@ -209,21 +356,83 @@ export default function PricesClient() {
                         <td className={`${styles.cell} ${styles.right}`} data-label="Chg%">
                           <span className={`${styles.badge} ${badgeClass}`}>{fmtPct(r.changePct)}</span>
                         </td>
-                        <td className={styles.cell} data-label="CCY">
-                          {r.currency || "—"}
+                        <td className={`${styles.cell} ${styles.right}`} data-label="Cost" onClick={(e) => e.stopPropagation()}>
+                          <input
+                            className={styles.costInput}
+                            inputMode="decimal"
+                            value={isFiniteNum(cost) ? String(cost) : ""}
+                            placeholder={isFiniteNum(r.price) ? String(r.price) : ""}
+                            onChange={(e) => {
+                              const v = e.target.value;
+                              const n = Number(v);
+                              setCosts((prev) => {
+                                const next = { ...prev };
+                                if (v === "") {
+                                  delete next[r.symbol];
+                                } else if (Number.isFinite(n)) {
+                                  next[r.symbol] = n;
+                                }
+                                try {
+                                  localStorage.setItem("pg_costs_v1", JSON.stringify(next));
+                                } catch {
+                                  // ignore
+                                }
+                                return next;
+                              });
+                            }}
+                            type="number"
+                            step="0.01"
+                          />
                         </td>
-                        <td className={styles.cell} data-label="State">
-                          {r.marketState || "—"}
+                        <td className={`${styles.cell} ${styles.right}`} data-label="P&L">
+                          <span className={`${styles.badge} ${pnlCls}`}>{fmtSigned(pnl, 2)}</span>
                         </td>
                       </tr>
                     );
 
                     const expanded = open ? (
                       <tr key={`${r.symbol}__expanded`} className={styles.expandRow}>
-                        <td className={styles.expandCell} colSpan={6}>
+                        <td className={styles.expandCell} colSpan={5}>
                           <div className={styles.expandHeader}>
                             <div className={styles.expandTitle}>{t("klineTitle", { symbol: r.symbol })}</div>
                             <div className={styles.expandHint}>{t("klineHint")}</div>
+                          </div>
+                          <div className={styles.expandMeta} onClick={(e) => e.stopPropagation()}>
+                            <div className={styles.metaItem}>
+                              <div className={styles.metaLabel}>{t("cost")}</div>
+                              <input
+                                className={styles.costInput}
+                                inputMode="decimal"
+                                value={isFiniteNum(cost) ? String(cost) : ""}
+                                placeholder={isFiniteNum(r.price) ? String(r.price) : ""}
+                                onChange={(e) => {
+                                  const v = e.target.value;
+                                  const n = Number(v);
+                                  setCosts((prev) => {
+                                    const next = { ...prev };
+                                    if (v === "") {
+                                      delete next[r.symbol];
+                                    } else if (Number.isFinite(n)) {
+                                      next[r.symbol] = n;
+                                    }
+                                    try {
+                                      localStorage.setItem("pg_costs_v1", JSON.stringify(next));
+                                    } catch {
+                                      // ignore
+                                    }
+                                    return next;
+                                  });
+                                }}
+                                type="number"
+                                step="0.01"
+                              />
+                            </div>
+                            <div className={styles.metaItem}>
+                              <div className={styles.metaLabel}>{t("pnl")}</div>
+                              <div className={styles.metaValue}>
+                                <span className={`${styles.badge} ${pnlCls}`}>{fmtSigned(pnl, 2)}</span>
+                              </div>
+                            </div>
                           </div>
                           <div className={styles.expandCard}>
                             <Candles symbol={r.symbol} />
