@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import styles from "./PricesClient.module.css";
 
 type QuoteItem = {
   symbol: string;
@@ -56,88 +57,80 @@ export default function PricesClient() {
   const rows = useMemo(() => items, [items]);
 
   return (
-    <div style={{ maxWidth: 920, margin: "0 auto", padding: 24, fontFamily: "ui-sans-serif, system-ui" }}>
-      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-        <div>
-          <h1 style={{ fontSize: 22, margin: 0 }}>Portfolio Grow — Prices</h1>
-          <p style={{ margin: "6px 0 0", color: "#555" }}>
-            US equities + XAU/USD (via Yahoo Finance quote endpoint)
-          </p>
-        </div>
-        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-          <button
-            onClick={load}
-            style={{
-              border: "1px solid #ddd",
-              background: "white",
-              padding: "8px 12px",
-              borderRadius: 8,
-              cursor: "pointer",
-            }}
-          >
-            Refresh
-          </button>
-          <div style={{ fontSize: 12, color: "#666" }}>
-            {lastUpdated ? `Updated ${lastUpdated.toLocaleTimeString()}` : "—"}
+    <div className={styles.wrap}>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <div>
+            <h1 className={styles.title}>Portfolio Grow</h1>
+            <div className={styles.subtitle}>
+              Prices • US equities + XAU/USD • data via Stooq
+            </div>
           </div>
-        </div>
-      </div>
+          <div className={styles.actions}>
+            <button className={styles.button} onClick={load}>
+              Refresh
+            </button>
+            <div className={styles.updated}>
+              {lastUpdated ? `Updated ${lastUpdated.toLocaleTimeString()}` : "—"}
+            </div>
+          </div>
+        </header>
 
-      <div style={{ marginTop: 16, border: "1px solid #eee", borderRadius: 12, overflow: "hidden" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
-          <thead style={{ background: "#fafafa" }}>
-            <tr>
-              <th style={{ textAlign: "left", padding: 12, fontSize: 12, color: "#444" }}>Symbol</th>
-              <th style={{ textAlign: "left", padding: 12, fontSize: 12, color: "#444" }}>Name</th>
-              <th style={{ textAlign: "right", padding: 12, fontSize: 12, color: "#444" }}>Price</th>
-              <th style={{ textAlign: "right", padding: 12, fontSize: 12, color: "#444" }}>Chg%</th>
-              <th style={{ textAlign: "left", padding: 12, fontSize: 12, color: "#444" }}>Currency</th>
-              <th style={{ textAlign: "left", padding: 12, fontSize: 12, color: "#444" }}>State</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loading ? (
-              <tr>
-                <td colSpan={6} style={{ padding: 14, color: "#666" }}>
-                  Loading…
-                </td>
-              </tr>
-            ) : error ? (
-              <tr>
-                <td colSpan={6} style={{ padding: 14, color: "#b00020" }}>
-                  {error}
-                </td>
-              </tr>
-            ) : rows.length === 0 ? (
-              <tr>
-                <td colSpan={6} style={{ padding: 14, color: "#666" }}>
-                  No data.
-                </td>
-              </tr>
-            ) : (
-              rows.map((r) => {
-                const up = (r.changePct ?? 0) >= 0;
-                // CN-style: red up, green down
-                const color = r.changePct === null ? "#666" : up ? "#b00020" : "#0a7b34";
-                return (
-                  <tr key={r.symbol} style={{ borderTop: "1px solid #f0f0f0" }}>
-                    <td style={{ padding: 12, fontWeight: 600 }}>{r.symbol}</td>
-                    <td style={{ padding: 12, color: "#333" }}>{r.name}</td>
-                    <td style={{ padding: 12, textAlign: "right", fontVariantNumeric: "tabular-nums" }}>{fmtPrice(r.price)}</td>
-                    <td style={{ padding: 12, textAlign: "right", fontVariantNumeric: "tabular-nums", color }}>{fmtPct(r.changePct)}</td>
-                    <td style={{ padding: 12, color: "#333" }}>{r.currency || "—"}</td>
-                    <td style={{ padding: 12, color: "#333" }}>{r.marketState || "—"}</td>
+        <section className={styles.grid}>
+          {loading ? (
+            <div className={styles.banner}>Loading…</div>
+          ) : error ? (
+            <div className={`${styles.banner} ${styles.bannerError}`}>{error}</div>
+          ) : null}
+
+          <div className={styles.tableWrap}>
+            <table className={styles.table}>
+              <thead className={styles.thead}>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th className={styles.right}>Price</th>
+                  <th className={styles.right}>Chg%</th>
+                  <th>CCY</th>
+                  <th>State</th>
+                </tr>
+              </thead>
+              <tbody className={styles.tbody}>
+                {!loading && !error && rows.length === 0 ? (
+                  <tr>
+                    <td className={styles.cell} colSpan={6}>
+                      No data.
+                    </td>
                   </tr>
-                );
-              })
-            )}
-          </tbody>
-        </table>
-      </div>
+                ) : (
+                  rows.map((r) => {
+                    const up = (r.changePct ?? 0) >= 0;
+                    // CN-style: red up, green down
+                    const badgeClass = r.changePct === null ? styles.badgeFlat : up ? styles.badgeUp : styles.badgeDown;
+                    return (
+                      <tr key={r.symbol}>
+                        <td className={`${styles.cell} ${styles.symbol}`}>{r.symbol}</td>
+                        <td className={`${styles.cell} ${styles.name}`}>{r.name}</td>
+                        <td className={`${styles.cell} ${styles.right}`}>{fmtPrice(r.price)}</td>
+                        <td className={`${styles.cell} ${styles.right}`}>
+                          <span className={`${styles.badge} ${badgeClass}`}>{fmtPct(r.changePct)}</span>
+                        </td>
+                        <td className={styles.cell}>{r.currency || "—"}</td>
+                        <td className={styles.cell}>{r.marketState || "—"}</td>
+                      </tr>
+                    );
+                  })
+                )}
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-      <p style={{ marginTop: 12, fontSize: 12, color: "#777" }}>
-        Auto-refreshes every 30s.
-      </p>
+        <footer className={styles.footer}>
+          <div className={styles.note}>Auto-refreshes every 30s.</div>
+          <div className={styles.note}>Tip: swipe horizontally on mobile for the full table.</div>
+        </footer>
+      </div>
     </div>
   );
 }
