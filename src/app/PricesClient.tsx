@@ -122,14 +122,24 @@ export default function PricesClient() {
                         className={open ? styles.rowOpen : undefined}
                         style={{ cursor: "pointer" }}
                       >
-                        <td className={`${styles.cell} ${styles.symbol}`}>{r.symbol}</td>
-                        <td className={`${styles.cell} ${styles.name}`}>{r.name}</td>
-                        <td className={`${styles.cell} ${styles.right}`}>{fmtPrice(r.price)}</td>
-                        <td className={`${styles.cell} ${styles.right}`}>
+                        <td className={`${styles.cell} ${styles.symbol}`} data-label="Symbol">
+                          {r.symbol}
+                        </td>
+                        <td className={`${styles.cell} ${styles.name}`} data-label="Name">
+                          {r.name}
+                        </td>
+                        <td className={`${styles.cell} ${styles.right}`} data-label="Price">
+                          {fmtPrice(r.price)}
+                        </td>
+                        <td className={`${styles.cell} ${styles.right}`} data-label="Chg%">
                           <span className={`${styles.badge} ${badgeClass}`}>{fmtPct(r.changePct)}</span>
                         </td>
-                        <td className={styles.cell}>{r.currency || "—"}</td>
-                        <td className={styles.cell}>{r.marketState || "—"}</td>
+                        <td className={styles.cell} data-label="CCY">
+                          {r.currency || "—"}
+                        </td>
+                        <td className={styles.cell} data-label="State">
+                          {r.marketState || "—"}
+                        </td>
                       </tr>
                     );
 

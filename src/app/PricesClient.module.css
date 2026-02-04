@@ -143,6 +143,68 @@
   min-width: 760px;
 }
 
+/* Mobile: turn the table into stacked “cards” so you can see all fields without horizontal scrolling */
+@media (max-width: 640px) {
+  .table {
+    min-width: 0;
+  }
+
+  .thead {
+    display: none;
+  }
+
+  .tbody tr {
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .cell {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .cell::before {
+    content: attr(data-label);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  .symbol {
+    font-size: 14px;
+  }
+
+  .name {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .expandHeader {
+    padding: 12px 14px 6px;
+  }
+
+  .expandCard {
+    padding: 0 10px 12px;
+  }
+
+  .expandCard > div {
+    padding: 8px;
+  }
+}
+
 .thead th {
   position: sticky;
   top: 0;
