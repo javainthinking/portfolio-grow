@@ -162,7 +162,10 @@ export default function PricesClient() {
                         style={{ cursor: "pointer" }}
                       >
                         <td className={`${styles.cell} ${styles.symbol}`} data-label="Symbol">
-                          {r.symbol}
+                          <div className={styles.symBlock}>
+                            <div className={styles.symTicker}>{r.symbol}</div>
+                            <div className={styles.symName}>{r.name}</div>
+                          </div>
                         </td>
                         <td className={`${styles.cell} ${styles.name}`} data-label="Name">
                           {r.name}

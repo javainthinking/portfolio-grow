@@ -175,6 +175,9 @@
 
 /* Mobile: turn the table into stacked “cards” so you can see all fields without horizontal scrolling */
 @media (max-width: 640px) {
+  .symName {
+    display: block;
+  }
   .table {
     min-width: 0;
   }
@@ -193,8 +196,15 @@
     display: none;
   }
 
+  /* Mobile compact redesign: one row = compact quote card (no field labels) */
   .tbody tr {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "sym chg"
+      "price chg";
+    gap: 2px 12px;
+    padding: 10px 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
     background: rgba(255, 255, 255, 0.02);
   }
@@ -203,39 +213,78 @@
     background: rgba(255, 255, 255, 0.03);
   }
 
-  /* Compact mode on mobile: show only key fields */
+  /* show only key fields */
+  .tbody td[data-label="Name"],
   .tbody td[data-label="CCY"],
   .tbody td[data-label="State"] {
     display: none;
   }
 
   .cell {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 9px 14px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    display: block;
+    padding: 0;
+    border-top: none;
   }
 
   .cell::before {
-    content: attr(data-label);
-    color: rgba(255, 255, 255, 0.55);
-    font-size: 11px;
-    font-weight: 600;
+    content: none;
+    display: none;
+  }
+
+  /* grid placement */
+  .tbody td[data-label="Symbol"] {
+    grid-area: sym;
+  }
+
+  .tbody td[data-label="Price"] {
+    grid-area: price;
+  }
+
+  .tbody td[data-label="Chg%"] {
+    grid-area: chg;
+    align-self: center;
+  }
+
+  .symBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .symTicker {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+  }
+
+  .symName {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.62);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 58vw;
+  }
+
+  .tbody td[data-label="Price"] {
+    font-size: 18px;
+    font-weight: 800;
     letter-spacing: 0.2px;
+    font-variant-numeric: tabular-nums;
+    color: rgba(255, 255, 255, 0.92);
   }
 
-  .symbol {
-    font-size: 14px;
+  .badge {
+    min-width: 86px;
+    padding: 8px 12px;
+    font-size: 13px;
   }
 
-  .name {
-    color: rgba(255, 255, 255, 0.78);
-  }
-
-  .right {
-    text-align: right;
+  /* expanded chart row should still behave like block */
+  .expandRow {
+    display: block;
+    padding: 0;
   }
 
   .expandHeader {
@@ -287,6 +336,20 @@
 .symbol {
   font-weight: 700;
   letter-spacing: 0.3px;
+}
+
+.symBlock {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.symTicker {
+  font-weight: 800;
+}
+
+.symName {
+  display: none;
 }
 
 .name {
