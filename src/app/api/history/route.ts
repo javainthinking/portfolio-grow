@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 // Fetch a SINGLE symbol history to avoid burst outbound requests (which can fail on serverless).
 const ASSETS = [
-  { symbol: "COMP", stooq: "comp.us" },
+  { symbol: "NDQ", stooq: "^ndq" },
   { symbol: "XAUUSD", stooq: "xauusd" },
   { symbol: "MU", stooq: "mu.us" },
   { symbol: "NVDA", stooq: "nvda.us" },

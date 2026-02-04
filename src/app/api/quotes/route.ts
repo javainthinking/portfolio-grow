@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 
 const ASSETS = [
   // Put index + gold first
-  { symbol: "COMP", name: "Nasdaq Composite", stooq: "comp.us", currency: "USD" },
+  { symbol: "NDQ", name: "Nasdaq Composite", stooq: "^ndq", currency: "USD" },
   { symbol: "XAUUSD", name: "Gold / USD", stooq: "xauusd", currency: "USD" },
 
   { symbol: "MU", name: "Micron Technology", stooq: "mu.us", currency: "USD" },
