@@ -1,5 +1,5 @@
-import PricesClient from "./PricesClient";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return <PricesClient />;
+export default function Root() {
+  redirect("/en");
 }

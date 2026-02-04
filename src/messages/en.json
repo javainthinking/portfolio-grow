@@ -1,0 +1,24 @@
+{
+  "app": {
+    "title": "Portfolio Grow",
+    "subtitle": "Prices • US equities + XAU/USD • data via Stooq",
+    "refresh": "Refresh",
+    "updated": "Updated {time}",
+    "loading": "Loading…",
+    "noData": "No data.",
+    "autoRefresh": "Auto-refreshes every 30s.",
+    "tipMobile": "Tip: swipe horizontally on mobile for the full table.",
+    "tapToToggle": "Tap the row to expand/collapse",
+    "klineTitle": "{symbol} — Daily Candles",
+    "klineHint": "Tap the same symbol again to collapse",
+    "klineLoading": "Loading candles…",
+    "klineEmpty": "No candle data.",
+    "klineError": "Candles failed: {error}",
+    "klineHelp": "Scroll to zoom; drag to pan; pinch on mobile.",
+    "days": "Daily candles",
+    "lang": {
+      "en": "EN",
+      "zh": "中文"
+    }
+  }
+}

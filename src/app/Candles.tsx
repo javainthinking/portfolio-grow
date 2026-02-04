@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import styles from "./PricesClient.module.css";
 import CandlesTV from "./CandlesTV";
 
@@ -15,6 +16,7 @@ function fmt(v: number) {
 }
 
 export default function Candles({ symbol, height = 320 }: { symbol: string; height?: number }) {
+  const t = useTranslations("app");
   const [series, setSeries] = useState<Candle[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -44,15 +46,17 @@ export default function Candles({ symbol, height = 320 }: { symbol: string; heig
   }, [series]);
 
   if (error) {
-    return <div className={`${styles.banner} ${styles.bannerError}`}>K线加载失败：{error}</div>;
+    return (
+      <div className={`${styles.banner} ${styles.bannerError}`}>{t("klineError", { error })}</div>
+    );
   }
 
   if (!series) {
-    return <div className={styles.banner}>K线加载中…</div>;
+    return <div className={styles.banner}>{t("klineLoading")}</div>;
   }
 
   if (series.length === 0) {
-    return <div className={styles.banner}>暂无K线数据</div>;
+    return <div className={styles.banner}>{t("klineEmpty")}</div>;
   }
 
   return (
@@ -67,9 +71,7 @@ export default function Candles({ symbol, height = 320 }: { symbol: string; heig
           marginBottom: 10,
         }}
       >
-        <div style={{ color: "rgba(255,255,255,0.70)", fontSize: 12 }}>
-          日K线（可缩放/拖动/十字光标）
-        </div>
+        <div style={{ color: "rgba(255,255,255,0.70)", fontSize: 12 }}>{t("days")}</div>
         {last ? (
           <div style={{ color: "rgba(255,255,255,0.62)", fontSize: 12 }}>
             {last.d}  O {fmt(last.o)}  H {fmt(last.h)}  L {fmt(last.l)}  C {fmt(last.c)}
@@ -79,9 +81,7 @@ export default function Candles({ symbol, height = 320 }: { symbol: string; heig
 
       <CandlesTV candles={series} height={height} />
 
-      <div style={{ marginTop: 8, color: "rgba(255,255,255,0.50)", fontSize: 11 }}>
-        鼠标滚轮/触控板缩放；按住拖动平移；移动端双指缩放。
-      </div>
+      <div style={{ marginTop: 8, color: "rgba(255,255,255,0.50)", fontSize: 11 }}>{t("klineHelp")}</div>
     </div>
   );
 }

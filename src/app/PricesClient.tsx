@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 import Candles from "./Candles";
 import styles from "./PricesClient.module.css";
 
@@ -29,6 +31,11 @@ function fmtPct(v: number | null) {
 }
 
 export default function PricesClient() {
+  const t = useTranslations("app");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [items, setItems] = useState<QuoteItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -72,20 +79,42 @@ export default function PricesClient() {
       <div className={styles.container}>
         <header className={styles.header}>
           <div>
-            <h1 className={styles.title}>Portfolio Grow</h1>
-            <div className={styles.subtitle}>Prices • US equities + XAU/USD • data via Stooq</div>
+            <h1 className={styles.title}>{t("title")}</h1>
+            <div className={styles.subtitle}>{t("subtitle")}</div>
           </div>
           <div className={styles.actions}>
-            <button className={styles.button} onClick={load}>
-              Refresh
+            <button
+              className={styles.button}
+              onClick={() => {
+                // Toggle locale while keeping path.
+                const next = locale === "en" ? "zh" : "en";
+                // next-intl middleware uses localePrefix as-needed.
+                // When switching to default (en), drop the prefix.
+                const parts = pathname.split("/").filter(Boolean);
+                if (parts.length && (parts[0] === "en" || parts[0] === "zh")) {
+                  parts[0] = next;
+                } else {
+                  parts.unshift(next);
+                }
+                const nextPath = next === "en" ? `/${parts.slice(1).join("/")}` : `/${parts.join("/")}`;
+                router.push(nextPath || "/");
+              }}
+              title={locale === "en" ? t("lang.zh") : t("lang.en")}
+            >
+              {locale === "en" ? t("lang.zh") : t("lang.en")}
             </button>
-            <div className={styles.updated}>{lastUpdated ? `Updated ${lastUpdated.toLocaleTimeString()}` : "—"}</div>
+            <button className={styles.button} onClick={load}>
+              {t("refresh")}
+            </button>
+            <div className={styles.updated}>
+              {lastUpdated ? t("updated", { time: lastUpdated.toLocaleTimeString() }) : "—"}
+            </div>
           </div>
         </header>
 
         <section className={styles.grid}>
           {loading ? (
-            <div className={styles.banner}>Loading…</div>
+            <div className={styles.banner}>{t("loading")}</div>
           ) : error ? (
             <div className={`${styles.banner} ${styles.bannerError}`}>{error}</div>
           ) : null}
@@ -106,7 +135,7 @@ export default function PricesClient() {
                 {!loading && !error && rows.length === 0 ? (
                   <tr>
                     <td className={styles.cell} colSpan={6}>
-                      No data.
+                      {t("noData")}
                     </td>
                   </tr>
                 ) : (
@@ -147,8 +176,8 @@ export default function PricesClient() {
                       <tr key={`${r.symbol}__expanded`} className={styles.expandRow}>
                         <td className={styles.expandCell} colSpan={6}>
                           <div className={styles.expandHeader}>
-                            <div className={styles.expandTitle}>{r.symbol} — 日K线</div>
-                            <div className={styles.expandHint}>再次点击该标的可收起</div>
+                            <div className={styles.expandTitle}>{t("klineTitle", { symbol: r.symbol })}</div>
+                            <div className={styles.expandHint}>{t("klineHint")}</div>
                           </div>
                           <div className={styles.expandCard}>
                             <Candles symbol={r.symbol} />
@@ -166,8 +195,8 @@ export default function PricesClient() {
         </section>
 
         <footer className={styles.footer}>
-          <div className={styles.note}>Auto-refreshes every 30s.</div>
-          <div className={styles.note}>Tip: swipe horizontally on mobile for the full table.</div>
+          <div className={styles.note}>{t("autoRefresh")}</div>
+          <div className={styles.note}>{t("tipMobile")}</div>
         </footer>
       </div>
     </div>
