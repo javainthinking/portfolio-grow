@@ -37,16 +37,16 @@
 }
 
 .title {
-  font-size: 22px;
+  font-size: 26px;
   letter-spacing: -0.3px;
   margin: 0;
 }
 
 .subtitle {
-  margin-top: 6px;
+  margin-top: 8px;
   color: var(--pg-subtext);
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .actions {
@@ -56,7 +56,7 @@
 }
 
 .updated {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--pg-subtext);
   white-space: nowrap;
 }
@@ -218,8 +218,8 @@
   background: rgba(11, 15, 23, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--pg-border);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.2px;
   color: var(--pg-subtext);
   padding: 12px 14px;
@@ -240,7 +240,7 @@
 
 .cell {
   padding: 14px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--pg-text);
 }
 
@@ -301,7 +301,7 @@
 
 .footer {
   margin-top: 12px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--pg-subtext);
   display: flex;
   justify-content: space-between;
@@ -315,7 +315,7 @@
 
 @media (max-width: 520px) {
   .title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .container {
