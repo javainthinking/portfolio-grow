@@ -16,6 +16,10 @@
     "klineError": "Candles failed: {error}",
     "klineHelp": "Scroll to zoom; drag to pan; pinch on mobile.",
     "days": "Daily candles",
+    "market": {
+      "open": "TRADING",
+      "closed": "CLOSED"
+    },
     "lang": {
       "en": "EN",
       "zh": "中文"

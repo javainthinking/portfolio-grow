@@ -16,6 +16,10 @@
     "klineError": "K线加载失败：{error}",
     "klineHelp": "滚轮缩放；拖动平移；移动端双指缩放。",
     "days": "日K线",
+    "market": {
+      "open": "交易中",
+      "closed": "收盘"
+    },
     "lang": {
       "en": "EN",
       "zh": "中文"

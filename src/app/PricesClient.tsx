@@ -20,6 +20,30 @@ type ApiResp =
   | { ok: true; items: QuoteItem[] }
   | { ok: false; error: string };
 
+function usMarketStatusNow() {
+  // Rough NYSE/Nasdaq regular session only (no holidays)
+  const now = new Date();
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    weekday: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).formatToParts(now);
+
+  const wk = parts.find((p) => p.type === "weekday")?.value ?? "";
+  const hh = Number(parts.find((p) => p.type === "hour")?.value ?? "0");
+  const mm = Number(parts.find((p) => p.type === "minute")?.value ?? "0");
+
+  const isWeekday = ["Mon", "Tue", "Wed", "Thu", "Fri"].includes(wk);
+  const mins = hh * 60 + mm;
+  const open = 9 * 60 + 30;
+  const close = 16 * 60;
+  const isOpen = isWeekday && mins >= open && mins < close;
+
+  return { isOpen, label: isOpen ? "OPEN" : "CLOSED" } as const;
+}
+
 function fmtPrice(v: number | null) {
   if (v === null || Number.isNaN(v)) return "—";
   return new Intl.NumberFormat(undefined, { maximumFractionDigits: 4 }).format(v);
@@ -40,6 +64,7 @@ export default function PricesClient() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const [market, setMarket] = useState(() => usMarketStatusNow());
 
   async function load() {
     try {
@@ -59,7 +84,11 @@ export default function PricesClient() {
   useEffect(() => {
     load();
     const id = setInterval(load, 30_000);
-    return () => clearInterval(id);
+    const mid = setInterval(() => setMarket(usMarketStatusNow()), 60_000);
+    return () => {
+      clearInterval(id);
+      clearInterval(mid);
+    };
   }, []);
 
   const rows = useMemo(() => items, [items]);
@@ -83,6 +112,10 @@ export default function PricesClient() {
             <div className={styles.subtitle}>{t("subtitle")}</div>
           </div>
           <div className={styles.actions}>
+            <div className={`${styles.marketTag} ${market.isOpen ? styles.marketOpen : styles.marketClosed}`}>
+              {market.isOpen ? t("market.open") : t("market.closed")}
+            </div>
+
             <div className={styles.langGroup} aria-label="Language">
               <button
                 className={`${styles.langBtn} ${locale === "en" ? styles.langActive : ""}`}
