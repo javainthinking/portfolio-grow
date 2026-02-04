@@ -7,7 +7,9 @@ import { NextResponse } from "next/server";
 
 const ASSETS = [
   // Put index + gold first
-  { symbol: "NDQ", name: "Nasdaq Composite", stooq: "^ndq", currency: "USD" },
+  // Stooq doesn't reliably provide the cash index (Nasdaq 100 / NDX).
+  // Use NQ.F (Nasdaq 100 futures) as a close proxy.
+  { symbol: "NDX", name: "Nasdaq 100", stooq: "nq.f", currency: "USD" },
   { symbol: "XAUUSD", name: "Gold / USD", stooq: "xauusd", currency: "USD" },
 
   { symbol: "MU", name: "Micron Technology", stooq: "mu.us", currency: "USD" },
