@@ -77,16 +77,7 @@ export default function Candles({ symbol, height = 320 }: { symbol: string; heig
         ) : null}
       </div>
 
-      <div
-        style={{
-          borderRadius: 14,
-          border: "1px solid rgba(255,255,255,0.10)",
-          background: "rgba(255,255,255,0.04)",
-          padding: 10,
-        }}
-      >
-        <CandlesTV candles={series} height={height} />
-      </div>
+      <CandlesTV candles={series} height={height} />
 
       <div style={{ marginTop: 8, color: "rgba(255,255,255,0.50)", fontSize: 11 }}>
         鼠标滚轮/触控板缩放；按住拖动平移；移动端双指缩放。

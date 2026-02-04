@@ -88,64 +88,64 @@ export default function PricesClient() {
             <div className={`${styles.banner} ${styles.bannerError}`}>{error}</div>
           ) : null}
 
-          <div className={styles.tableWrap}>
-            <table className={styles.table}>
-              <thead className={styles.thead}>
-                <tr>
-                  <th>Symbol</th>
-                  <th>Name</th>
-                  <th className={styles.right}>Price</th>
-                  <th className={styles.right}>Chg%</th>
-                  <th>CCY</th>
-                  <th>State</th>
-                </tr>
-              </thead>
-              <tbody className={styles.tbody}>
-                {!loading && !error && rows.length === 0 ? (
+          <div className={styles.split}>
+            <div className={styles.tableWrap}>
+              <table className={styles.table}>
+                <thead className={styles.thead}>
                   <tr>
-                    <td className={styles.cell} colSpan={6}>
-                      No data.
-                    </td>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th className={styles.right}>Price</th>
+                    <th className={styles.right}>Chg%</th>
+                    <th>CCY</th>
+                    <th>State</th>
                   </tr>
-                ) : (
-                  rows.map((r) => {
-                    const up = (r.changePct ?? 0) >= 0;
-                    // CN-style: red up, green down
-                    const badgeClass = r.changePct === null ? styles.badgeFlat : up ? styles.badgeUp : styles.badgeDown;
-                    const selected = r.symbol === active;
-                    return (
-                      <tr
-                        key={r.symbol}
-                        onClick={() => setActive(r.symbol)}
-                        style={{ cursor: "pointer", background: selected ? "rgba(255,255,255,0.05)" : undefined }}
-                      >
-                        <td className={`${styles.cell} ${styles.symbol}`}>{r.symbol}</td>
-                        <td className={`${styles.cell} ${styles.name}`}>{r.name}</td>
-                        <td className={`${styles.cell} ${styles.right}`}>{fmtPrice(r.price)}</td>
-                        <td className={`${styles.cell} ${styles.right}`}>
-                          <span className={`${styles.badge} ${badgeClass}`}>{fmtPct(r.changePct)}</span>
-                        </td>
-                        <td className={styles.cell}>{r.currency || "—"}</td>
-                        <td className={styles.cell}>{r.marketState || "—"}</td>
-                      </tr>
-                    );
-                  })
-                )}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className={styles.tbody}>
+                  {!loading && !error && rows.length === 0 ? (
+                    <tr>
+                      <td className={styles.cell} colSpan={6}>
+                        No data.
+                      </td>
+                    </tr>
+                  ) : (
+                    rows.map((r) => {
+                      const up = (r.changePct ?? 0) >= 0;
+                      // CN-style: red up, green down
+                      const badgeClass = r.changePct === null ? styles.badgeFlat : up ? styles.badgeUp : styles.badgeDown;
+                      const selected = r.symbol === active;
+                      return (
+                        <tr
+                          key={r.symbol}
+                          onClick={() => setActive(r.symbol)}
+                          style={{ cursor: "pointer", background: selected ? "rgba(255,255,255,0.05)" : undefined }}
+                        >
+                          <td className={`${styles.cell} ${styles.symbol}`}>{r.symbol}</td>
+                          <td className={`${styles.cell} ${styles.name}`}>{r.name}</td>
+                          <td className={`${styles.cell} ${styles.right}`}>{fmtPrice(r.price)}</td>
+                          <td className={`${styles.cell} ${styles.right}`}>
+                            <span className={`${styles.badge} ${badgeClass}`}>{fmtPct(r.changePct)}</span>
+                          </td>
+                          <td className={styles.cell}>{r.currency || "—"}</td>
+                          <td className={styles.cell}>{r.marketState || "—"}</td>
+                        </tr>
+                      );
+                    })
+                  )}
+                </tbody>
+              </table>
+            </div>
 
-          {/* Daily candles for selected symbol */}
-          <div style={{ padding: 14, borderTop: "1px solid rgba(255,255,255,0.10)" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.82)" }}>
-                {active} — 日K线
+            {/* Daily candles for selected symbol (kept visually close) */}
+            <div className={styles.chartPane}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
+                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.82)" }}>{active} — 日K线</div>
+                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)" }}>点表格行切换</div>
               </div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)" }}>
-                点击上方表格行可切换标的
+              <div className={styles.chartCard}>
+                <Candles symbol={active} />
               </div>
             </div>
-            <Candles symbol={active} />
           </div>
         </section>
 
