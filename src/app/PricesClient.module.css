@@ -203,8 +203,8 @@
     grid-template-areas:
       "sym chg"
       "price chg";
-    gap: 2px 12px;
-    padding: 10px 14px;
+    gap: 1px 10px;
+    padding: 8px 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
     background: rgba(255, 255, 255, 0.02);
   }
@@ -253,32 +253,32 @@
   }
 
   .symTicker {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 800;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.35px;
   }
 
   .symName {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.62);
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.60);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 58vw;
+    max-width: 62vw;
   }
 
   .tbody td[data-label="Price"] {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 800;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.15px;
     font-variant-numeric: tabular-nums;
     color: rgba(255, 255, 255, 0.92);
   }
 
   .badge {
-    min-width: 86px;
-    padding: 8px 12px;
-    font-size: 13px;
+    min-width: 78px;
+    padding: 7px 10px;
+    font-size: 12px;
   }
 
   /* expanded chart row should still behave like block */
@@ -288,11 +288,11 @@
   }
 
   .expandHeader {
-    padding: 12px 14px 6px;
+    padding: 10px 12px 6px;
   }
 
   .expandCard {
-    padding: 0 10px 12px;
+    padding: 0 8px 10px;
   }
 
   .expandCard > div {

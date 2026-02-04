@@ -13,6 +13,7 @@ const ASSETS = [
   { symbol: "MP", stooq: "mp.us" },
   { symbol: "TSLA", stooq: "tsla.us" },
   { symbol: "PSTG", stooq: "pstg.us" },
+  { symbol: "FSLR", stooq: "fslr.us" },
   { symbol: "XAUUSD", stooq: "xauusd" },
 ] as const;
 
