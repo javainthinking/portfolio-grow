@@ -83,29 +83,39 @@ export default function PricesClient() {
             <div className={styles.subtitle}>{t("subtitle")}</div>
           </div>
           <div className={styles.actions}>
-            <button
-              className={styles.button}
-              onClick={() => {
-                // Toggle locale while keeping path.
-                const next = locale === "en" ? "zh" : "en";
-                // next-intl middleware uses localePrefix as-needed.
-                // When switching to default (en), drop the prefix.
-                const parts = pathname.split("/").filter(Boolean);
-                if (parts.length && (parts[0] === "en" || parts[0] === "zh")) {
-                  parts[0] = next;
-                } else {
-                  parts.unshift(next);
-                }
-                const nextPath = next === "en" ? `/${parts.slice(1).join("/")}` : `/${parts.join("/")}`;
-                router.push(nextPath || "/");
-              }}
-              title={locale === "en" ? t("lang.zh") : t("lang.en")}
-            >
-              {locale === "en" ? t("lang.zh") : t("lang.en")}
-            </button>
-            <button className={styles.button} onClick={load}>
+            <div className={styles.langGroup} aria-label="Language">
+              <button
+                className={`${styles.langBtn} ${locale === "en" ? styles.langActive : ""}`}
+                onClick={() => {
+                  if (locale === "en") return;
+                  const parts = pathname.split("/").filter(Boolean);
+                  if (parts.length && (parts[0] === "en" || parts[0] === "zh")) parts[0] = "en";
+                  else parts.unshift("en");
+                  router.push(`/${parts.join("/")}`);
+                }}
+                type="button"
+              >
+                {t("lang.en")}
+              </button>
+              <button
+                className={`${styles.langBtn} ${locale === "zh" ? styles.langActive : ""}`}
+                onClick={() => {
+                  if (locale === "zh") return;
+                  const parts = pathname.split("/").filter(Boolean);
+                  if (parts.length && (parts[0] === "en" || parts[0] === "zh")) parts[0] = "zh";
+                  else parts.unshift("zh");
+                  router.push(`/${parts.join("/")}`);
+                }}
+                type="button"
+              >
+                {t("lang.zh")}
+              </button>
+            </div>
+
+            <button className={styles.button} onClick={load} type="button">
               {t("refresh")}
             </button>
+
             <div className={styles.updated}>
               {lastUpdated ? t("updated", { time: lastUpdated.toLocaleTimeString() }) : "—"}
             </div>
