@@ -18,8 +18,11 @@
     "days": "日K线",
     "sections": {
       "watch": "关注",
-      "stocks": "股票"
+      "stocks": "股票",
+      "ark": "木头姐（ARKK）"
     },
+    "asOf": "截至 {date}",
+    "arkNote": "持仓数据来自 ARK 官方每日发布的 ARKK holdings 文件。",
     "cost": "成本",
     "pnl": "盈亏",
     "totalPnl": "总盈亏",

@@ -18,8 +18,11 @@
     "days": "Daily candles",
     "sections": {
       "watch": "Watch",
-      "stocks": "Stocks"
+      "stocks": "Stocks",
+      "ark": "Cathie Wood (ARKK)"
     },
+    "asOf": "As of {date}",
+    "arkNote": "Holdings are fetched from ARK's published daily ARKK holdings file.",
     "cost": "Cost",
     "pnl": "P&L",
     "totalPnl": "Total P&L",

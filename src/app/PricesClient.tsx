@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import Candles from "./Candles";
+import ArkkHoldings from "./ArkkHoldings";
 import styles from "./PricesClient.module.css";
 
 type QuoteItem = {
@@ -301,6 +302,8 @@ export default function PricesClient() {
             </table>
           </div>
         </section>
+
+        <ArkkHoldings />
 
         {/* Stocks */}
         <section className={styles.grid} style={{ marginTop: 14 }}>
