@@ -117,7 +117,8 @@ export default function PricesClient() {
             ) : (
               rows.map((r) => {
                 const up = (r.changePct ?? 0) >= 0;
-                const color = r.changePct === null ? "#666" : up ? "#0a7b34" : "#b00020";
+                // CN-style: red up, green down
+                const color = r.changePct === null ? "#666" : up ? "#b00020" : "#0a7b34";
                 return (
                   <tr key={r.symbol} style={{ borderTop: "1px solid #f0f0f0" }}>
                     <td style={{ padding: 12, fontWeight: 600 }}>{r.symbol}</td>
