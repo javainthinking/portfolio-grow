@@ -89,37 +89,52 @@
   overflow: hidden;
 }
 
-.split {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 0;
-}
-
 .tableWrap {
   overflow-x: auto;
-  border-right: 1px solid rgba(255, 255, 255, 0.10);
 }
 
-.chartPane {
-  padding: 14px;
+.rowOpen {
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.chartCard {
+.expandRow {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.expandCell {
+  padding: 0;
+}
+
+.expandHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 14px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.expandTitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.expandHint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.expandCard {
+  padding: 0 14px 14px;
+}
+
+.expandCard > div {
+  /* keep the chart visually attached */
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.10);
   background: rgba(255, 255, 255, 0.04);
   padding: 10px;
-}
-
-@media (max-width: 900px) {
-  .split {
-    grid-template-columns: 1fr;
-  }
-
-  .tableWrap {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-  }
 }
 
 .table {

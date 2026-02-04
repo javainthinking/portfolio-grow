@@ -56,14 +56,16 @@ export default function PricesClient() {
   }, []);
 
   const rows = useMemo(() => items, [items]);
-  const [active, setActive] = useState<string>("NVDA");
+  const [active, setActive] = useState<string | null>("NVDA");
 
   // default selection once data arrives
   useEffect(() => {
     if (!items.length) return;
-    if (items.some((x) => x.symbol === active)) return;
+    if (active && items.some((x) => x.symbol === active)) return;
     setActive(items[0]!.symbol);
   }, [items, active]);
+
+  const toggle = (sym: string) => setActive((cur) => (cur === sym ? null : sym));
 
   return (
     <div className={styles.wrap}>
@@ -88,64 +90,68 @@ export default function PricesClient() {
             <div className={`${styles.banner} ${styles.bannerError}`}>{error}</div>
           ) : null}
 
-          <div className={styles.split}>
-            <div className={styles.tableWrap}>
-              <table className={styles.table}>
-                <thead className={styles.thead}>
+          <div className={styles.tableWrap}>
+            <table className={styles.table}>
+              <thead className={styles.thead}>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th className={styles.right}>Price</th>
+                  <th className={styles.right}>Chg%</th>
+                  <th>CCY</th>
+                  <th>State</th>
+                </tr>
+              </thead>
+              <tbody className={styles.tbody}>
+                {!loading && !error && rows.length === 0 ? (
                   <tr>
-                    <th>Symbol</th>
-                    <th>Name</th>
-                    <th className={styles.right}>Price</th>
-                    <th className={styles.right}>Chg%</th>
-                    <th>CCY</th>
-                    <th>State</th>
+                    <td className={styles.cell} colSpan={6}>
+                      No data.
+                    </td>
                   </tr>
-                </thead>
-                <tbody className={styles.tbody}>
-                  {!loading && !error && rows.length === 0 ? (
-                    <tr>
-                      <td className={styles.cell} colSpan={6}>
-                        No data.
-                      </td>
-                    </tr>
-                  ) : (
-                    rows.map((r) => {
-                      const up = (r.changePct ?? 0) >= 0;
-                      // CN-style: red up, green down
-                      const badgeClass = r.changePct === null ? styles.badgeFlat : up ? styles.badgeUp : styles.badgeDown;
-                      const selected = r.symbol === active;
-                      return (
-                        <tr
-                          key={r.symbol}
-                          onClick={() => setActive(r.symbol)}
-                          style={{ cursor: "pointer", background: selected ? "rgba(255,255,255,0.05)" : undefined }}
-                        >
-                          <td className={`${styles.cell} ${styles.symbol}`}>{r.symbol}</td>
-                          <td className={`${styles.cell} ${styles.name}`}>{r.name}</td>
-                          <td className={`${styles.cell} ${styles.right}`}>{fmtPrice(r.price)}</td>
-                          <td className={`${styles.cell} ${styles.right}`}>
-                            <span className={`${styles.badge} ${badgeClass}`}>{fmtPct(r.changePct)}</span>
-                          </td>
-                          <td className={styles.cell}>{r.currency || "—"}</td>
-                          <td className={styles.cell}>{r.marketState || "—"}</td>
-                        </tr>
-                      );
-                    })
-                  )}
-                </tbody>
-              </table>
-            </div>
+                ) : (
+                  rows.flatMap((r) => {
+                    const up = (r.changePct ?? 0) >= 0;
+                    const badgeClass = r.changePct === null ? styles.badgeFlat : up ? styles.badgeUp : styles.badgeDown;
+                    const open = r.symbol === active;
 
-            {/* Daily candles for selected symbol (kept visually close) */}
-            <div className={styles.chartPane}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
-                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.82)" }}>{active} — 日K线</div>
-                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)" }}>点表格行切换</div>
-              </div>
-              <div className={styles.chartCard}>
-                <Candles symbol={active} />
-              </div>
-            </div>
+                    const baseRow = (
+                      <tr
+                        key={r.symbol}
+                        onClick={() => toggle(r.symbol)}
+                        className={open ? styles.rowOpen : undefined}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <td className={`${styles.cell} ${styles.symbol}`}>{r.symbol}</td>
+                        <td className={`${styles.cell} ${styles.name}`}>{r.name}</td>
+                        <td className={`${styles.cell} ${styles.right}`}>{fmtPrice(r.price)}</td>
+                        <td className={`${styles.cell} ${styles.right}`}>
+                          <span className={`${styles.badge} ${badgeClass}`}>{fmtPct(r.changePct)}</span>
+                        </td>
+                        <td className={styles.cell}>{r.currency || "—"}</td>
+                        <td className={styles.cell}>{r.marketState || "—"}</td>
+                      </tr>
+                    );
+
+                    const expanded = open ? (
+                      <tr key={`${r.symbol}__expanded`} className={styles.expandRow}>
+                        <td className={styles.expandCell} colSpan={6}>
+                          <div className={styles.expandHeader}>
+                            <div className={styles.expandTitle}>{r.symbol} — 日K线</div>
+                            <div className={styles.expandHint}>再次点击该标的可收起</div>
+                          </div>
+                          <div className={styles.expandCard}>
+                            <Candles symbol={r.symbol} />
+                          </div>
+                        </td>
+                      </tr>
+                    ) : null;
+
+                    return expanded ? [baseRow, expanded] : [baseRow];
+                  })
+                )}
+              </tbody>
+            </table>
           </div>
         </section>
 
