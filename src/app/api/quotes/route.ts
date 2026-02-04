@@ -6,6 +6,10 @@ import { NextResponse } from "next/server";
 // https://stooq.com/q/l/?s=nvda.us&i=d
 
 const ASSETS = [
+  // Put index + gold first
+  { symbol: "COMP", name: "Nasdaq Composite", stooq: "comp.us", currency: "USD" },
+  { symbol: "XAUUSD", name: "Gold / USD", stooq: "xauusd", currency: "USD" },
+
   { symbol: "MU", name: "Micron Technology", stooq: "mu.us", currency: "USD" },
   { symbol: "NVDA", name: "NVIDIA", stooq: "nvda.us", currency: "USD" },
   { symbol: "PLTR", name: "Palantir", stooq: "pltr.us", currency: "USD" },
@@ -19,7 +23,6 @@ const ASSETS = [
   { symbol: "PSTG", name: "Pure Storage", stooq: "pstg.us", currency: "USD" },
   { symbol: "FSLR", name: "First Solar", stooq: "fslr.us", currency: "USD" },
   { symbol: "SOXL", name: "Direxion Daily Semiconductor Bull 3X", stooq: "soxl.us", currency: "USD" },
-  { symbol: "XAUUSD", name: "Gold / USD", stooq: "xauusd", currency: "USD" },
 ] as const;
 
 type StooqRow = {

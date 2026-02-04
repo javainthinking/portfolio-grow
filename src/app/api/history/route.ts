@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 
 // Fetch a SINGLE symbol history to avoid burst outbound requests (which can fail on serverless).
 const ASSETS = [
+  { symbol: "COMP", stooq: "comp.us" },
+  { symbol: "XAUUSD", stooq: "xauusd" },
   { symbol: "MU", stooq: "mu.us" },
   { symbol: "NVDA", stooq: "nvda.us" },
   { symbol: "PLTR", stooq: "pltr.us" },
@@ -15,7 +17,6 @@ const ASSETS = [
   { symbol: "PSTG", stooq: "pstg.us" },
   { symbol: "FSLR", stooq: "fslr.us" },
   { symbol: "SOXL", stooq: "soxl.us" },
-  { symbol: "XAUUSD", stooq: "xauusd" },
 ] as const;
 
 type Candle = { d: string; o: number; h: number; l: number; c: number };
