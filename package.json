@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "scrape:pelosi": "node scripts/scrape-pelosi-valueinvesting.mjs"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.2.8",
@@ -22,6 +23,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "playwright": "^1.51.1",
     "typescript": "^5"
   }
 }

@@ -1,0 +1,1446 @@
+{
+  "ok": true,
+  "source": "https://valueinvesting.io/get_pelosi",
+  "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
+  "fetchedAt": "2026-02-04T08:28:33.635Z",
+  "lastTrade": "2026-01-16",
+  "isCurrentMember": "Yes",
+  "networth": 274022706.262363,
+  "houseInfo": "Democratic / House / California",
+  "totalTrades": 201,
+  "tradeVolume": 212987239,
+  "trades": [
+    {
+      "symbol": "AB",
+      "transactionType": "Purchase",
+      "transactionDate": "2026-01-16",
+      "fullName": "ALLIANCEBERNSTEIN HOLDING L.P. UNITS",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Purchased 25,000 Shares"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Purchase",
+      "transactionDate": "2026-01-16",
+      "fullName": "AMAZON.COM, INC. ",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Purchase",
+      "transactionDate": "2026-01-16",
+      "fullName": "ALPHABET INC. ",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2026-01-16",
+      "fullName": "NVIDIA CORPORATION ",
+      "amount": "250,001 - 500,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "VST",
+      "transactionType": "Purchase",
+      "transactionDate": "2026-01-16",
+      "fullName": "VISTRA CORP. COMMON STOCK",
+      "amount": "100,001 - 250,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "VSNT",
+      "transactionType": "Exchange",
+      "transactionDate": "2026-01-02",
+      "fullName": "VERSANT MEDIA GROUP, INC. ",
+      "amount": "15.00",
+      "description": "776 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "APPLE INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-30",
+      "fullName": "APPLE INC. ",
+      "amount": "5,000,001 - 25,000,000",
+      "description": "Contribution Of 28,200 Shares"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "AMAZON.COM, INC. ",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "DIS",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-30",
+      "fullName": "WALT DISNEY COMPANY",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 10,000 Shares"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-30",
+      "fullName": "ALPHABET INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Contribution Of 7,704 Shares"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "ALPHABET INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "NVIDIA CORPORATION ",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "PYPL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-30",
+      "fullName": "PAYPAL HOLDINGS, INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 5,000 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-24",
+      "fullName": "APPLE INC. ",
+      "amount": "5,000,001 - 25,000,000",
+      "description": "Sold 45,000 Shares"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-24",
+      "fullName": "AMAZON.COM, INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": null
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-24",
+      "fullName": "NVIDIA CORPORATION ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 20,000 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-10-22",
+      "fullName": "APPLE INC. ",
+      "amount": "100,001 - 250,000",
+      "description": "Contribution Of 382 Shares"
+    },
+    {
+      "symbol": "AVGO",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-06-20",
+      "fullName": "BROADCOM INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 200 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-01-14",
+      "fullName": "AMAZON.COM, INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-01-14",
+      "fullName": "ALPHABET INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-01-14",
+      "fullName": "NVIDIA CORPORATION ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "TEM",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-01-14",
+      "fullName": "TEMPUS AI, INC. ",
+      "amount": "50,001 - 100,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "VST",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-01-14",
+      "fullName": "VISTRA CORP. COMMON STOCK",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2024-12-31",
+      "fullName": "APPLE INC. ",
+      "amount": "5,000,001 - 25,000,000",
+      "description": "Sold 31,600 Shares"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Sale",
+      "transactionDate": "2024-12-31",
+      "fullName": "NVIDIA CORPORATION ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 10,000 Shares"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2024-12-20",
+      "fullName": "NVIDIA CORPORATION ",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 500 Call Options"
+    },
+    {
+      "symbol": "PANW",
+      "transactionType": "Purchase",
+      "transactionDate": "2024-12-20",
+      "fullName": "PALO ALTO NETWORKS, INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 140 Call Options"
+    },
+    {
+      "symbol": "MSFT",
+      "transactionType": "Sale",
+      "transactionDate": "2024-07-26",
+      "fullName": "MICROSOFT CORPORATION ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 5,000 Shares"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2024-07-26",
+      "fullName": "NVIDIA CORPORATION ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Purchased 10,000 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2024-07-01",
+      "fullName": "VISA INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 2,000 Shares"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2024-06-26",
+      "fullName": "NVIDIA CORPORATION ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Purchased 10,000 Shares"
+    },
+    {
+      "symbol": "AVGO",
+      "transactionType": "Purchase",
+      "transactionDate": "2024-06-24",
+      "fullName": "BROADCOM INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "TSLA",
+      "transactionType": "Sale",
+      "transactionDate": "2024-06-24",
+      "fullName": "TESLA, INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 2,500 Shares"
+    },
+    {
+      "symbol": "PANW",
+      "transactionType": "Purchase",
+      "transactionDate": "2024-02-21",
+      "fullName": "PALO ALTO NETWORKS, INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "PANW",
+      "transactionType": "Purchase",
+      "transactionDate": "2024-02-12",
+      "fullName": "PALO ALTO NETWORKS, INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2023-11-22",
+      "fullName": "NVIDIA CORPORATION",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2023-06-15",
+      "fullName": "APPLE INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "MSFT",
+      "transactionType": "Purchase",
+      "transactionDate": "2023-06-15",
+      "fullName": "MICROSOFT CORPORATION",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2023-05-08",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Contribution Of 2,900 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2023-03-17",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 100 Call Options"
+    },
+    {
+      "symbol": "RBLX",
+      "transactionType": "Sale",
+      "transactionDate": "2023-01-20",
+      "fullName": "ROBLOX CORPORATION CLASS A",
+      "amount": "1.00 - 100",
+      "description": "100 Call Options"
+    },
+    {
+      "symbol": "NFLX",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-30",
+      "fullName": "NETFLIX, INC.",
+      "amount": "250,001 - 500,000",
+      "description": null
+    },
+    {
+      "symbol": "NFLX",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-29",
+      "fullName": "NETFLIX, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 1,000 Shares"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-28",
+      "fullName": "ALPHABET INC. ",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 10,000 Shares"
+    },
+    {
+      "symbol": "PYPL",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-28",
+      "fullName": "PAYPAL HOLDINGS, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 5,000 Shares"
+    },
+    {
+      "symbol": "RBLX",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-28",
+      "fullName": "ROBLOX CORPORATION CLASS A",
+      "amount": "100,001 - 250,000",
+      "description": "Sold 5,000 Shares"
+    },
+    {
+      "symbol": "DIS",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-21",
+      "fullName": "WALT DISNEY COMPANY",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 10,000 Shares"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-21",
+      "fullName": "ALPHABET INC. ",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 10,000 Shares"
+    },
+    {
+      "symbol": "PYPL",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-21",
+      "fullName": "PAYPAL HOLDINGS, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 5,000 Shares"
+    },
+    {
+      "symbol": "CRM",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-20",
+      "fullName": "SALESFORCE, INC.",
+      "amount": "9.00 - 210",
+      "description": "Sold 130 Call Options"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-20",
+      "fullName": "ALPHABET INC. ",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 10,000 Shares"
+    },
+    {
+      "symbol": "TSLA",
+      "transactionType": "Sale",
+      "transactionDate": "2022-12-20",
+      "fullName": "TESLA, INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 5,000 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2022-11-08",
+      "fullName": "VISA INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 20,000 Shares"
+    },
+    {
+      "symbol": "DIS",
+      "transactionType": "Sale",
+      "transactionDate": "2022-09-16",
+      "fullName": "WALT DISNEY COMPANY",
+      "amount": "1.00 - 130",
+      "description": "50 Call Options"
+    },
+    {
+      "symbol": "GOOG",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-09-16",
+      "fullName": "ALPHABET INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 200 Call Options"
+    },
+    {
+      "symbol": "MU",
+      "transactionType": "Sale",
+      "transactionDate": "2022-09-16",
+      "fullName": "MICRON TECHNOLOGY, INC.",
+      "amount": "15,001 - 50,000",
+      "description": "Sold 100 Call Options"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Sale",
+      "transactionDate": "2022-09-16",
+      "fullName": "NVIDIA CORPORATION",
+      "amount": "100,001 - 250,000",
+      "description": "Sold 50 Call Options"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Sale",
+      "transactionDate": "2022-07-26",
+      "fullName": "NVIDIA CORPORATION",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 25,000 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2022-06-21",
+      "fullName": "VISA INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 10,000 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2022-06-17",
+      "fullName": "APPLE INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Sold 50 Call Options"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-06-17",
+      "fullName": "NVIDIA CORPORATION",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 200 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-05-24",
+      "fullName": "APPLE INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "MSFT",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-05-24",
+      "fullName": "MICROSOFT CORPORATION",
+      "amount": "50,001 - 100,000",
+      "description": "Purchased 10 Call Options"
+    },
+    {
+      "symbol": "MSFT",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-05-24",
+      "fullName": "MICROSOFT CORPORATION",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 40 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-05-13",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
+    },
+    {
+      "symbol": "WBD",
+      "transactionType": "Exchange",
+      "transactionDate": "2022-04-11",
+      "fullName": "WARNER BROS. DISCOVERY, INC. ",
+      "amount": "50,001 - 100,000",
+      "description": "2419 Shares"
+    },
+    {
+      "symbol": "TSLA",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-03-17",
+      "fullName": "TESLA, INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 25 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-01-21",
+      "fullName": "APPLE INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 100 Call Options"
+    },
+    {
+      "symbol": "AXP",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-01-21",
+      "fullName": "AMERICAN EXPRESS COMPANY",
+      "amount": "250,001 - 500,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "DIS",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-01-21",
+      "fullName": "WALT DISNEY COMPANY",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 100 Call Options"
+    },
+    {
+      "symbol": "PYPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2022-01-21",
+      "fullName": "PAYPAL HOLDINGS, INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2021-12-30",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Contribution Of 3,000 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2021-12-30",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Contribution Of 3,000 Shares"
+    },
+    {
+      "symbol": "MU",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-12-21",
+      "fullName": "MICRON TECHNOLOGY, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 100 Call Options"
+    },
+    {
+      "symbol": "CRM",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-12-20",
+      "fullName": "SALESFORCE.COM INC",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 30 Call Options"
+    },
+    {
+      "symbol": "CRM",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-12-20",
+      "fullName": "SALESFORCE.COM INC",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
+    },
+    {
+      "symbol": "RBLX",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-12-20",
+      "fullName": "ROBLOX CORPORATION CLASS A",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 100 Call Options"
+    },
+    {
+      "symbol": "DIS",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-12-17",
+      "fullName": "WALT DISNEY COMPANY",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "GOOG",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-12-17",
+      "fullName": "ALPHABET INC. ",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 10 Call Options"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-07-23",
+      "fullName": "NVIDIA CORPORATION",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 5,000 Shares"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-07-23",
+      "fullName": "NVIDIA CORPORATION",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "MONTGOMERY, AL .2, SCHAUMBERG, IL .1",
+      "transactionType": "Sale",
+      "transactionDate": "2021-07-22",
+      "fullName": "LAKELAND, FL ",
+      "amount": "250,001 - 500,000",
+      "description": "10,000 Shares"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-06-18",
+      "fullName": "ALPHABET INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 40 Call Options"
+    },
+    {
+      "symbol": "NVDA",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-06-03",
+      "fullName": "NVIDIA CORPORATION",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-05-21",
+      "fullName": "APPLE INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-05-21",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "MSFT",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-03-19",
+      "fullName": "MICROSOFT CORPORATION",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 100 Call Options"
+    },
+    {
+      "symbol": "MSFT",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-03-19",
+      "fullName": "MICROSOFT CORPORATION",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 150 Call Options"
+    },
+    {
+      "symbol": "AB",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-02-23",
+      "fullName": "ALLIANCEBERNSTEIN HOLDING L.P. UNITS",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 25,000 Shares"
+    },
+    {
+      "symbol": "AB",
+      "transactionType": "Purchase",
+      "transactionDate": "2021-02-18",
+      "fullName": "ALLIANCEBERNSTEIN HOLDING L.P. UNITS",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 15,000 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-12-22",
+      "fullName": "APPLE INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 100 Call Options"
+    },
+    {
+      "symbol": "AB",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-12-22",
+      "fullName": "ALLIANCEBERNSTEIN HOLDING L.P. UNITS",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 20,000 Shares"
+    },
+    {
+      "symbol": "DIS",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-12-22",
+      "fullName": "WALT DISNEY COMPANY",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
+    },
+    {
+      "symbol": "TSLA",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-12-22",
+      "fullName": "TESLA, INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 25 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2020-11-06",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Contribution Of 4,500 Shares"
+    },
+    {
+      "symbol": "CRWD",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-09-03",
+      "fullName": "CROWDSTRIKE HOLDINGS, INC. ",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 5,000 Shares"
+    },
+    {
+      "symbol": "FB",
+      "transactionType": "Sale",
+      "transactionDate": "2020-08-07",
+      "fullName": "FACEBOOK, INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Contribution Of 5,000 Shares"
+    },
+    {
+      "symbol": "AXP",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-06-24",
+      "fullName": "AMERICAN EXPRESS COMPANY",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "PYPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-06-24",
+      "fullName": "PAYPAL HOLDINGS, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2020-06-18",
+      "fullName": "APPLE INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 100 Call Options"
+    },
+    {
+      "symbol": "CRM",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-06-18",
+      "fullName": "SALESFORCE.COM INC",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 100 Call Options"
+    },
+    {
+      "symbol": "NFLX",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-06-18",
+      "fullName": "NETFLIX, INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "PYPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-06-12",
+      "fullName": "PAYPAL HOLDINGS, INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 5,000 Shares"
+    },
+    {
+      "symbol": "PYPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-06-12",
+      "fullName": "PAYPAL HOLDINGS, INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 5,000 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 3,000 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "APPLE INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 3,300 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 1,700 Shares"
+    },
+    {
+      "symbol": "FB",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "FACEBOOK, INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 5,000 Shares"
+    },
+    {
+      "symbol": "IBKR",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "INTERACTIVE BROKERS GROUP, INC. ",
+      "amount": "100,001 - 250,000",
+      "description": "Sold 3,000 Shares"
+    },
+    {
+      "symbol": "MORN",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "MORNINGSTAR, INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Sold 1,700 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "VISA INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 3,000 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "VISA INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 3,000 Shares"
+    },
+    {
+      "symbol": "MSFT",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-02-28",
+      "fullName": "MICROSOFT CORPORATION",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 50 Call Options"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-02-27",
+      "fullName": "ALPHABET INC. ",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 40 Call Options"
+    },
+    {
+      "symbol": "MSFT",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-02-21",
+      "fullName": "MICROSOFT CORPORATION",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
+    },
+    {
+      "symbol": "MSFT",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-02-20",
+      "fullName": "MICROSOFT CORPORATION",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 100 Call Options"
+    },
+    {
+      "symbol": "WORK",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-02-20",
+      "fullName": "SLACK TECHNOLOGIES, INC. CLASS A",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 10,000 Shares"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Sale",
+      "transactionDate": "2020-01-16",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 20 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-01-16",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 30 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Sale",
+      "transactionDate": "2020-01-16",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 20 Call Options"
+    },
+    {
+      "symbol": "FB",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-01-16",
+      "fullName": "FACEBOOK, INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Exercised 20 Call Options"
+    },
+    {
+      "symbol": "FB",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-01-16",
+      "fullName": "FACEBOOK, INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Exercised 30 Call Options"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2019-08-07",
+      "fullName": "VISA INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Sale Of 1,000 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2019-08-07",
+      "fullName": "VISA INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Sale Of 1.000 Shares"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Purchase",
+      "transactionDate": "2019-07-22",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "NFLX",
+      "transactionType": "Purchase",
+      "transactionDate": "2019-07-22",
+      "fullName": "NETFLIX, INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 30 Call Options"
+    },
+    {
+      "symbol": "NFLX",
+      "transactionType": "Purchase",
+      "transactionDate": "2019-07-05",
+      "fullName": "NETFLIX, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "CRM",
+      "transactionType": "Purchase",
+      "transactionDate": "2019-06-18",
+      "fullName": "SALESFORCE.COM INC",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 80 Call Options"
+    },
+    {
+      "symbol": "CRM",
+      "transactionType": "Purchase",
+      "transactionDate": "2019-06-14",
+      "fullName": "SALESFORCE.COM INC",
+      "amount": "50,001 - 100,000",
+      "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "T",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-10-24",
+      "fullName": "AT&T INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 10,000 Shares"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-10-12",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Purchased 30 Call Options"
+    },
+    {
+      "symbol": "FB",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-10-09",
+      "fullName": "FACEBOOK, INC. ",
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 30 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-09-20",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-09-20",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-09-11",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-07-27",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchase Of 20 Call Options"
+    },
+    {
+      "symbol": "FB",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-07-27",
+      "fullName": "FACEBOOK, INC. ",
+      "amount": "50,001 - 100,000",
+      "description": "Purchase Of 20 Call Options"
+    },
+    {
+      "symbol": "DBX",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-03-27",
+      "fullName": "DROPBOX, INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchase Of 10,000 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-02-02",
+      "fullName": "APPLE INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Purchase Of 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2018-02-02",
+      "fullName": "APPLE INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Purchase Of 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2017-12-29",
+      "fullName": "APPLE INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Contribution Of 2,800 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2017-12-28",
+      "fullName": "APPLE INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sale Of 9,000 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2017-12-28",
+      "fullName": "VISA INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sale Of 5,000 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2017-12-21",
+      "fullName": "APPLE INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Contribution Of 1,300 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2017-12-21",
+      "fullName": "VISA INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Contribution Of 1,750 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2017-06-15",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 100 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2017-01-20",
+      "fullName": "APPLE INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sale Of 100 Call Options"
+    },
+    {
+      "symbol": "SQ",
+      "transactionType": "Purchase",
+      "transactionDate": "2017-01-20",
+      "fullName": "SQUARE, INC. CLASS A",
+      "amount": "15,001 - 50,000",
+      "description": "Exercised 50 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2017-01-19",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 100 Call Options"
+    },
+    {
+      "symbol": "MGRC",
+      "transactionType": "Sale",
+      "transactionDate": "2016-07-21",
+      "fullName": "MCGRATH RENTCORP",
+      "amount": "250,001 - 500,000",
+      "description": "Sale Of 8,000 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2016-07-21",
+      "fullName": "VISA INC.",
+      "amount": "50,001 - 100,000",
+      "description": "Sale Of 1,250 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2016-05-17",
+      "fullName": "APPLE INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Purchase Of 100 Call Options"
+    },
+    {
+      "symbol": "SQ",
+      "transactionType": "Purchase",
+      "transactionDate": "2016-05-17",
+      "fullName": "SQUARE, INC. CLASS A",
+      "amount": "1,001 - 15,000",
+      "description": "Purchase Of 50 Call Options"
+    },
+    {
+      "symbol": "DIS",
+      "transactionType": "Purchase",
+      "transactionDate": "2016-01-15",
+      "fullName": "WALT DISNEY COMPANY",
+      "amount": "500,001 - 1,000,000",
+      "description": "Exercised 100 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2016-01-13",
+      "fullName": "APPLE INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Purchase Of 200 Call Options"
+    },
+    {
+      "symbol": "CRM",
+      "transactionType": "Sale",
+      "transactionDate": "2015-12-30",
+      "fullName": "SALESFORCE.COM INC",
+      "amount": "50,001 - 100,000",
+      "description": "Contribution Of 1,084 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2015-12-30",
+      "fullName": "BETWEEN BROKERAGE ACCOUNTS. VISA INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Contribution Of 2,000 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2015-12-29",
+      "fullName": "BETWEEN BROKERAGE ACCOUNTS. VISA INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sale Of 5,000 Shares"
+    },
+    {
+      "symbol": "HTZ",
+      "transactionType": "Purchase",
+      "transactionDate": "2015-07-16",
+      "fullName": "HERTZ GLOBAL HOLDINGS, INC",
+      "amount": "100,001 - 250,000",
+      "description": "Purchase Of 258 Call Options"
+    },
+    {
+      "symbol": "HTZ",
+      "transactionType": "Purchase",
+      "transactionDate": "2015-07-15",
+      "fullName": "HERTZ GLOBAL HOLDINGS, INC",
+      "amount": "15,001 - 50,000",
+      "description": "Purchase Of 42 Call Options"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2014-12-30",
+      "fullName": "VISA INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Sale Of 500 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2014-12-29",
+      "fullName": "VISA INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sale Of 1000 Shares"
+    },
+    {
+      "symbol": "DIS",
+      "transactionType": "Purchase",
+      "transactionDate": "2014-12-10",
+      "fullName": "WALT DISNEY COMPANY",
+      "amount": "50,001 - 100,000",
+      "description": "Purchase Of 92 Options"
+    },
+    {
+      "symbol": "DIS",
+      "transactionType": "Purchase",
+      "transactionDate": "2014-11-28",
+      "fullName": "WALT DISNEY COMPANY",
+      "amount": "1,001 - 15,000",
+      "description": "Purchase Of 8 Options"
+    },
+    {
+      "symbol": "HTZ",
+      "transactionType": "Purchase",
+      "transactionDate": "2014-11-28",
+      "fullName": "HERTZ GLOBAL HOLDINGS, INC",
+      "amount": "50,001 - 100,000",
+      "description": "Purchase Of 100 Options"
+    },
+    {
+      "symbol": "HTZ",
+      "transactionType": "Purchase",
+      "transactionDate": "2014-11-25",
+      "fullName": "HERTZ GLOBAL HOLDINGS, INC",
+      "amount": "100,001 - 250,000",
+      "description": "Purchase Of 200 Options"
+    },
+    {
+      "symbol": "HTZ",
+      "transactionType": "Purchase",
+      "transactionDate": "2014-11-06",
+      "fullName": "HERTZ GLOBAL HOLDINGS, INC",
+      "amount": "50,001 - 100,000",
+      "description": "Purchase Of 150 Options"
+    },
+    {
+      "symbol": "HTZ",
+      "transactionType": "Purchase",
+      "transactionDate": "2014-11-05",
+      "fullName": "HERTZ GLOBAL HOLDINGS, INC",
+      "amount": "15,001 - 50,000",
+      "description": "Purchase Of 50 Options"
+    },
+    {
+      "symbol": "SUNE",
+      "transactionType": "Purchase",
+      "transactionDate": "2014-10-24",
+      "fullName": "SUNEDISON, INC.",
+      "amount": "100,001 - 250,000",
+      "description": null
+    },
+    {
+      "symbol": "AA",
+      "transactionType": "Sale",
+      "transactionDate": "2014-10-23",
+      "fullName": "ALCOA INC.",
+      "amount": "15,001 - 50,000",
+      "description": null
+    },
+    {
+      "symbol": "BCOR",
+      "transactionType": "Sale",
+      "transactionDate": "2014-10-23",
+      "fullName": "BLUCORA, INC.",
+      "amount": "1,001 - 15,000",
+      "description": null
+    },
+    {
+      "symbol": "BRCM",
+      "transactionType": "Sale",
+      "transactionDate": "2014-10-23",
+      "fullName": "BROADCOM CORPORATION ",
+      "amount": "1,001 - 15,000",
+      "description": null
+    },
+    {
+      "symbol": "DOW",
+      "transactionType": "Sale",
+      "transactionDate": "2014-10-23",
+      "fullName": "DOW CHEMICAL COMPANY",
+      "amount": "15,001 - 50,000",
+      "description": null
+    },
+    {
+      "symbol": "ELX",
+      "transactionType": "Sale",
+      "transactionDate": "2014-10-23",
+      "fullName": "EMULEX CORPORATION",
+      "amount": "1,001 - 15,000",
+      "description": null
+    },
+    {
+      "symbol": "ENTR",
+      "transactionType": "Sale",
+      "transactionDate": "2014-10-23",
+      "fullName": "ENTROPIC COMMUNICATIONS, INC.",
+      "amount": "1,001 - 15,000",
+      "description": null
+    },
+    {
+      "symbol": "SFLY",
+      "transactionType": "Sale",
+      "transactionDate": "2014-10-23",
+      "fullName": "SHUTTERFLY, INC.",
+      "amount": "15,001 - 50,000",
+      "description": null
+    },
+    {
+      "symbol": "MGRC",
+      "transactionType": "Sale",
+      "transactionDate": "2014-09-22",
+      "fullName": "MCGRATH RENTCORP",
+      "amount": "50,001 - 100,000",
+      "description": "Contribution Of Shares"
+    },
+    {
+      "symbol": "RHI",
+      "transactionType": "Sale",
+      "transactionDate": "2014-09-22",
+      "fullName": "ROBERT HALF INTERNATIONAL INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Contribution Of Shares"
+    }
+  ]
+}

@@ -16,6 +16,8 @@ type Resp =
   | {
       ok: true;
       source: string;
+      fetchedAt?: string;
+      lastTrade?: string | null;
       positions: Pos[];
       disclaimer: string;
       logic: string;
@@ -40,8 +42,9 @@ export default function PelosiEstimate() {
         const json = (await res.json()) as Resp;
         if (!res.ok || !json.ok) throw new Error(!json.ok ? json.error : `HTTP ${res.status}`);
         if (!cancelled) setData(json);
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message ?? "Failed to load");
+      } catch (e: unknown) {
+        const msg = e instanceof Error ? e.message : "Failed to load";
+        if (!cancelled) setError(msg);
       }
     })();
     return () => {
@@ -109,7 +112,12 @@ export default function PelosiEstimate() {
 
       <div className={styles.footer}>
         <div className={styles.note}>
-          {t("source")}: <a href={data?.source} target="_blank" rel="noreferrer">GitHub</a>
+          {t("source")}: <a href={data?.source} target="_blank" rel="noreferrer">ValueInvesting.io</a>
+          {data?.fetchedAt ? (
+            <span style={{ marginLeft: 10, color: "rgba(255,255,255,0.55)" }}>
+              fetched: {new Date(data.fetchedAt).toLocaleString()}
+            </span>
+          ) : null}
         </div>
       </div>
     </section>
