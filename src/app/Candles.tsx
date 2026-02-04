@@ -6,7 +6,7 @@ import styles from "./PricesClient.module.css";
 type Candle = { d: string; o: number; h: number; l: number; c: number };
 
 type HistoryResp =
-  | { ok: true; series: Record<string, Candle[]> }
+  | { ok: true; candles: Candle[] }
   | { ok: false; error: string };
 
 function clamp(v: number, a: number, b: number) {
@@ -26,10 +26,10 @@ export default function Candles({ symbol, height = 180 }: { symbol: string; heig
     (async () => {
       try {
         setError(null);
-        const res = await fetch(`/api/history?days=120`, { cache: "no-store" });
+        const res = await fetch(`/api/history?symbol=${encodeURIComponent(symbol)}&days=160`, { cache: "no-store" });
         const json = (await res.json()) as HistoryResp;
         if (!res.ok || !json.ok) throw new Error(!json.ok ? json.error : `HTTP ${res.status}`);
-        if (!cancelled) setSeries(json.series[symbol] ?? []);
+        if (!cancelled) setSeries(json.candles ?? []);
       } catch (e: any) {
         if (!cancelled) setError(e?.message ?? "Failed to load history");
       }
