@@ -129,11 +129,12 @@ export default function PricesClient() {
 
   const [active, setActive] = useState<string | null>("NVDA");
 
-  // default selection once data arrives
+  // Keep expanded symbol only if it still exists; don't auto-expand anything.
   useEffect(() => {
     if (!items.length) return;
-    if (active && items.some((x) => x.symbol === active)) return;
-    setActive(items[0]!.symbol);
+    if (active === null) return;
+    if (items.some((x) => x.symbol === active)) return;
+    setActive(null);
   }, [items, active]);
 
   const toggle = (sym: string) => setActive((cur) => (cur === sym ? null : sym));
