@@ -2,10 +2,10 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-02-04T18:35:10.148Z",
+  "fetchedAt": "2026-02-05T18:36:23.036Z",
   "lastTrade": "2026-01-16",
   "isCurrentMember": "Yes",
-  "networth": 274022706.262363,
+  "networth": 273711155.344737,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 201,
   "tradeVolume": 212987239,
@@ -60,19 +60,19 @@
     },
     {
       "symbol": "AAPL",
-      "transactionType": "Purchase",
-      "transactionDate": "2025-12-30",
-      "fullName": "APPLE INC. ",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 20 Call Options"
-    },
-    {
-      "symbol": "AAPL",
       "transactionType": "Sale",
       "transactionDate": "2025-12-30",
       "fullName": "APPLE INC. ",
       "amount": "5,000,001 - 25,000,000",
       "description": "Contribution Of 28,200 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "APPLE INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 20 Call Options"
     },
     {
       "symbol": "AMZN",
@@ -615,16 +615,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "100,001 - 250,000",
-      "description": "Purchased 30 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
     },
     {
       "symbol": "CRM",
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 100 Call Options"
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 30 Call Options"
     },
     {
       "symbol": "RBLX",
@@ -712,7 +712,7 @@
       "transactionDate": "2021-03-19",
       "fullName": "MICROSOFT CORPORATION",
       "amount": "1,000,001 - 5,000,000",
-      "description": "Exercised 100 Call Options"
+      "description": "Exercised 150 Call Options"
     },
     {
       "symbol": "MSFT",
@@ -720,7 +720,7 @@
       "transactionDate": "2021-03-19",
       "fullName": "MICROSOFT CORPORATION",
       "amount": "1,000,001 - 5,000,000",
-      "description": "Exercised 150 Call Options"
+      "description": "Exercised 100 Call Options"
     },
     {
       "symbol": "AB",
@@ -964,19 +964,19 @@
     },
     {
       "symbol": "AMZN",
-      "transactionType": "Purchase",
-      "transactionDate": "2020-01-16",
-      "fullName": "AMAZON.COM, INC.",
-      "amount": "1,000,001 - 5,000,000",
-      "description": "Exercised 30 Call Options"
-    },
-    {
-      "symbol": "AMZN",
       "transactionType": "Sale",
       "transactionDate": "2020-01-16",
       "fullName": "AMAZON.COM, INC.",
       "amount": "250,001 - 500,000",
       "description": "Sold 20 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Purchase",
+      "transactionDate": "2020-01-16",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Exercised 30 Call Options"
     },
     {
       "symbol": "FB",
