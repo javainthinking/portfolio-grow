@@ -2,10 +2,10 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-02-18T18:38:42.107Z",
+  "fetchedAt": "2026-02-19T18:39:54.911Z",
   "lastTrade": "2026-01-16",
   "isCurrentMember": "Yes",
-  "networth": 268226593.342534,
+  "networth": 269284448.593988,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 201,
   "tradeVolume": 212987239,
@@ -68,19 +68,19 @@
     },
     {
       "symbol": "AAPL",
-      "transactionType": "Purchase",
-      "transactionDate": "2025-12-30",
-      "fullName": "APPLE INC. ",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 20 Call Options"
-    },
-    {
-      "symbol": "AAPL",
       "transactionType": "Sale",
       "transactionDate": "2025-12-30",
       "fullName": "APPLE INC. ",
       "amount": "5,000,001 - 25,000,000",
       "description": "Contribution Of 28,200 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "APPLE INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 20 Call Options"
     },
     {
       "symbol": "AMZN",
@@ -623,16 +623,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 100 Call Options"
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 30 Call Options"
     },
     {
       "symbol": "CRM",
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "100,001 - 250,000",
-      "description": "Purchased 30 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
     },
     {
       "symbol": "RBLX",
@@ -863,8 +863,8 @@
       "transactionType": "Sale",
       "transactionDate": "2020-05-08",
       "fullName": "APPLE INC.",
-      "amount": "500,001 - 1,000,000",
-      "description": "Sold 1,700 Shares"
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 3,300 Shares"
     },
     {
       "symbol": "AAPL",
@@ -879,8 +879,8 @@
       "transactionType": "Sale",
       "transactionDate": "2020-05-08",
       "fullName": "APPLE INC.",
-      "amount": "1,000,001 - 5,000,000",
-      "description": "Sold 3,300 Shares"
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 1,700 Shares"
     },
     {
       "symbol": "FB",
@@ -992,7 +992,7 @@
       "transactionDate": "2020-01-16",
       "fullName": "FACEBOOK, INC. ",
       "amount": "250,001 - 500,000",
-      "description": "Exercised 20 Call Options"
+      "description": "Exercised 30 Call Options"
     },
     {
       "symbol": "FB",
@@ -1000,15 +1000,7 @@
       "transactionDate": "2020-01-16",
       "fullName": "FACEBOOK, INC. ",
       "amount": "250,001 - 500,000",
-      "description": "Exercised 30 Call Options"
-    },
-    {
-      "symbol": "V",
-      "transactionType": "Sale",
-      "transactionDate": "2019-08-07",
-      "fullName": "VISA INC.",
-      "amount": "100,001 - 250,000",
-      "description": "Sale Of 1.000 Shares"
+      "description": "Exercised 20 Call Options"
     },
     {
       "symbol": "V",
@@ -1017,6 +1009,14 @@
       "fullName": "VISA INC.",
       "amount": "100,001 - 250,000",
       "description": "Sale Of 1,000 Shares"
+    },
+    {
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2019-08-07",
+      "fullName": "VISA INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Sale Of 1.000 Shares"
     },
     {
       "symbol": "AMZN",
