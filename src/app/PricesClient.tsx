@@ -216,6 +216,10 @@ export default function PricesClient() {
               </button>
             </div>
 
+            <a className={styles.button} href={`/${locale}/insights/gtc-2026`}>
+              {t("gtc2026")}
+            </a>
+
             <button className={styles.button} onClick={load} type="button">
               {t("refresh")}
             </button>

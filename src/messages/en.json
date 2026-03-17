@@ -3,6 +3,7 @@
     "title": "Portfolio Grow",
     "subtitle": "Prices • US equities + XAU/USD • data via Stooq",
     "refresh": "Refresh",
+    "gtc2026": "GTC 2026 Notes",
     "updated": "Updated {time}",
     "loading": "Loading…",
     "noData": "No data.",
