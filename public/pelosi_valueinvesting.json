@@ -2,10 +2,10 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-03-18T18:44:15.917Z",
+  "fetchedAt": "2026-03-19T18:41:47.982Z",
   "lastTrade": "2026-01-16",
   "isCurrentMember": "Yes",
-  "networth": 269370819.374733,
+  "networth": 267791936.317118,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 201,
   "tradeVolume": 212987239,
@@ -68,19 +68,19 @@
     },
     {
       "symbol": "AAPL",
-      "transactionType": "Sale",
-      "transactionDate": "2025-12-30",
-      "fullName": "APPLE INC. ",
-      "amount": "5,000,001 - 25,000,000",
-      "description": "Contribution Of 28,200 Shares"
-    },
-    {
-      "symbol": "AAPL",
       "transactionType": "Purchase",
       "transactionDate": "2025-12-30",
       "fullName": "APPLE INC. ",
       "amount": "250,001 - 500,000",
       "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-30",
+      "fullName": "APPLE INC. ",
+      "amount": "5,000,001 - 25,000,000",
+      "description": "Contribution Of 28,200 Shares"
     },
     {
       "symbol": "AMZN",
@@ -100,19 +100,19 @@
     },
     {
       "symbol": "GOOGL",
-      "transactionType": "Purchase",
-      "transactionDate": "2025-12-30",
-      "fullName": "ALPHABET INC. ",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 20 Call Options"
-    },
-    {
-      "symbol": "GOOGL",
       "transactionType": "Sale",
       "transactionDate": "2025-12-30",
       "fullName": "ALPHABET INC. ",
       "amount": "1,000,001 - 5,000,000",
       "description": "Contribution Of 7,704 Shares"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "ALPHABET INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 20 Call Options"
     },
     {
       "symbol": "NVDA",
@@ -623,16 +623,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 100 Call Options"
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 30 Call Options"
     },
     {
       "symbol": "CRM",
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "100,001 - 250,000",
-      "description": "Purchased 30 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
     },
     {
       "symbol": "RBLX",
@@ -864,14 +864,6 @@
       "transactionDate": "2020-05-08",
       "fullName": "APPLE INC.",
       "amount": "500,001 - 1,000,000",
-      "description": "Sold 3,000 Shares"
-    },
-    {
-      "symbol": "AAPL",
-      "transactionType": "Sale",
-      "transactionDate": "2020-05-08",
-      "fullName": "APPLE INC.",
-      "amount": "500,001 - 1,000,000",
       "description": "Sold 1,700 Shares"
     },
     {
@@ -881,6 +873,14 @@
       "fullName": "APPLE INC.",
       "amount": "1,000,001 - 5,000,000",
       "description": "Sold 3,300 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 3,000 Shares"
     },
     {
       "symbol": "FB",
