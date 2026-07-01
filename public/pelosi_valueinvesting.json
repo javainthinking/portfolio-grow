@@ -2,10 +2,10 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-06-30T19:30:12.544Z",
+  "fetchedAt": "2026-07-01T19:28:42.531Z",
   "lastTrade": "2026-05-29",
   "isCurrentMember": "Yes",
-  "networth": 245592987.816263,
+  "networth": 246740370.00921,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 203,
   "tradeVolume": 216737239,
@@ -116,19 +116,19 @@
     },
     {
       "symbol": "GOOGL",
-      "transactionType": "Purchase",
-      "transactionDate": "2025-12-30",
-      "fullName": "ALPHABET INC. ",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 20 Call Options"
-    },
-    {
-      "symbol": "GOOGL",
       "transactionType": "Sale",
       "transactionDate": "2025-12-30",
       "fullName": "ALPHABET INC. ",
       "amount": "1,000,001 - 5,000,000",
       "description": "Contribution Of 7,704 Shares"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "ALPHABET INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 20 Call Options"
     },
     {
       "symbol": "NVDA",
@@ -543,16 +543,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2022-05-24",
       "fullName": "MICROSOFT CORPORATION",
-      "amount": "50,001 - 100,000",
-      "description": "Purchased 10 Call Options"
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 40 Call Options"
     },
     {
       "symbol": "MSFT",
       "transactionType": "Purchase",
       "transactionDate": "2022-05-24",
       "fullName": "MICROSOFT CORPORATION",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 40 Call Options"
+      "amount": "50,001 - 100,000",
+      "description": "Purchased 10 Call Options"
     },
     {
       "symbol": "AAPL",
@@ -639,16 +639,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "100,001 - 250,000",
-      "description": "Purchased 30 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
     },
     {
       "symbol": "CRM",
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 100 Call Options"
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 30 Call Options"
     },
     {
       "symbol": "RBLX",
@@ -679,16 +679,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 5,000 Shares"
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
     },
     {
       "symbol": "NVDA",
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 50 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 5,000 Shares"
     },
     {
       "symbol": "MONTGOMERY, AL .2, SCHAUMBERG, IL .1",
@@ -736,7 +736,7 @@
       "transactionDate": "2021-03-19",
       "fullName": "MICROSOFT CORPORATION",
       "amount": "1,000,001 - 5,000,000",
-      "description": "Exercised 100 Call Options"
+      "description": "Exercised 150 Call Options"
     },
     {
       "symbol": "MSFT",
@@ -744,7 +744,7 @@
       "transactionDate": "2021-03-19",
       "fullName": "MICROSOFT CORPORATION",
       "amount": "1,000,001 - 5,000,000",
-      "description": "Exercised 150 Call Options"
+      "description": "Exercised 100 Call Options"
     },
     {
       "symbol": "AB",
