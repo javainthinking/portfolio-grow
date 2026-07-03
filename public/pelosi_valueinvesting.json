@@ -2,10 +2,10 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-07-02T19:07:36.412Z",
+  "fetchedAt": "2026-07-03T18:59:58.436Z",
   "lastTrade": "2026-05-29",
   "isCurrentMember": "Yes",
-  "networth": 246740370.00921,
+  "networth": 245449440.15845,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 203,
   "tradeVolume": 216737239,
@@ -116,19 +116,19 @@
     },
     {
       "symbol": "GOOGL",
-      "transactionType": "Sale",
-      "transactionDate": "2025-12-30",
-      "fullName": "ALPHABET INC. ",
-      "amount": "1,000,001 - 5,000,000",
-      "description": "Contribution Of 7,704 Shares"
-    },
-    {
-      "symbol": "GOOGL",
       "transactionType": "Purchase",
       "transactionDate": "2025-12-30",
       "fullName": "ALPHABET INC. ",
       "amount": "250,001 - 500,000",
       "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-30",
+      "fullName": "ALPHABET INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Contribution Of 7,704 Shares"
     },
     {
       "symbol": "NVDA",
@@ -639,16 +639,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 100 Call Options"
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 30 Call Options"
     },
     {
       "symbol": "CRM",
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "100,001 - 250,000",
-      "description": "Purchased 30 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
     },
     {
       "symbol": "RBLX",
@@ -679,16 +679,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 50 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 5,000 Shares"
     },
     {
       "symbol": "NVDA",
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 5,000 Shares"
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
     },
     {
       "symbol": "MONTGOMERY, AL .2, SCHAUMBERG, IL .1",
@@ -880,14 +880,6 @@
       "transactionDate": "2020-05-08",
       "fullName": "APPLE INC.",
       "amount": "500,001 - 1,000,000",
-      "description": "Sold 1,700 Shares"
-    },
-    {
-      "symbol": "AAPL",
-      "transactionType": "Sale",
-      "transactionDate": "2020-05-08",
-      "fullName": "APPLE INC.",
-      "amount": "500,001 - 1,000,000",
       "description": "Sold 3,000 Shares"
     },
     {
@@ -897,6 +889,14 @@
       "fullName": "APPLE INC.",
       "amount": "1,000,001 - 5,000,000",
       "description": "Sold 3,300 Shares"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2020-05-08",
+      "fullName": "APPLE INC.",
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 1,700 Shares"
     },
     {
       "symbol": "FB",
@@ -980,27 +980,27 @@
     },
     {
       "symbol": "AMZN",
-      "transactionType": "Sale",
-      "transactionDate": "2020-01-16",
-      "fullName": "AMAZON.COM, INC.",
-      "amount": "250,001 - 500,000",
-      "description": "Sold 20 Call Options"
-    },
-    {
-      "symbol": "AMZN",
-      "transactionType": "Sale",
-      "transactionDate": "2020-01-16",
-      "fullName": "AMAZON.COM, INC.",
-      "amount": "250,001 - 500,000",
-      "description": "Sold 20 Call Options"
-    },
-    {
-      "symbol": "AMZN",
       "transactionType": "Purchase",
       "transactionDate": "2020-01-16",
       "fullName": "AMAZON.COM, INC.",
       "amount": "1,000,001 - 5,000,000",
       "description": "Exercised 30 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Sale",
+      "transactionDate": "2020-01-16",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 20 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Sale",
+      "transactionDate": "2020-01-16",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 20 Call Options"
     },
     {
       "symbol": "FB",
