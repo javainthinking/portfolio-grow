@@ -2,10 +2,10 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-07-17T18:51:33.551Z",
+  "fetchedAt": "2026-07-18T18:44:48.621Z",
   "lastTrade": "2026-05-29",
   "isCurrentMember": "Yes",
-  "networth": 253844482.613092,
+  "networth": 251868787.809312,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 203,
   "tradeVolume": 216737239,
@@ -116,19 +116,19 @@
     },
     {
       "symbol": "GOOGL",
-      "transactionType": "Purchase",
-      "transactionDate": "2025-12-30",
-      "fullName": "ALPHABET INC. ",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 20 Call Options"
-    },
-    {
-      "symbol": "GOOGL",
       "transactionType": "Sale",
       "transactionDate": "2025-12-30",
       "fullName": "ALPHABET INC. ",
       "amount": "1,000,001 - 5,000,000",
       "description": "Contribution Of 7,704 Shares"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "ALPHABET INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 20 Call Options"
     },
     {
       "symbol": "NVDA",
@@ -679,16 +679,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 50 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 5,000 Shares"
     },
     {
       "symbol": "NVDA",
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 5,000 Shares"
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
     },
     {
       "symbol": "MONTGOMERY, AL .2, SCHAUMBERG, IL .1",
@@ -1008,7 +1008,7 @@
       "transactionDate": "2020-01-16",
       "fullName": "FACEBOOK, INC. ",
       "amount": "250,001 - 500,000",
-      "description": "Exercised 30 Call Options"
+      "description": "Exercised 20 Call Options"
     },
     {
       "symbol": "FB",
@@ -1016,7 +1016,7 @@
       "transactionDate": "2020-01-16",
       "fullName": "FACEBOOK, INC. ",
       "amount": "250,001 - 500,000",
-      "description": "Exercised 20 Call Options"
+      "description": "Exercised 30 Call Options"
     },
     {
       "symbol": "V",
