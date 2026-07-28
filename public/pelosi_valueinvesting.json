@@ -2,10 +2,10 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-07-27T19:10:07.834Z",
+  "fetchedAt": "2026-07-28T19:05:13.718Z",
   "lastTrade": "2026-05-29",
   "isCurrentMember": "Yes",
-  "networth": 248514478.907685,
+  "networth": 249554463.754308,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 203,
   "tradeVolume": 216737239,
@@ -639,16 +639,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "100,001 - 250,000",
-      "description": "Purchased 30 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
     },
     {
       "symbol": "CRM",
       "transactionType": "Purchase",
       "transactionDate": "2021-12-20",
       "fullName": "SALESFORCE.COM INC",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 100 Call Options"
+      "amount": "100,001 - 250,000",
+      "description": "Purchased 30 Call Options"
     },
     {
       "symbol": "RBLX",
@@ -736,7 +736,7 @@
       "transactionDate": "2021-03-19",
       "fullName": "MICROSOFT CORPORATION",
       "amount": "1,000,001 - 5,000,000",
-      "description": "Exercised 150 Call Options"
+      "description": "Exercised 100 Call Options"
     },
     {
       "symbol": "MSFT",
@@ -744,7 +744,7 @@
       "transactionDate": "2021-03-19",
       "fullName": "MICROSOFT CORPORATION",
       "amount": "1,000,001 - 5,000,000",
-      "description": "Exercised 100 Call Options"
+      "description": "Exercised 150 Call Options"
     },
     {
       "symbol": "AB",
