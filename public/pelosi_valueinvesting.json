@@ -2,10 +2,10 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-08-30T20:14:14.229Z",
+  "fetchedAt": "2026-08-31T22:09:26.416Z",
   "lastTrade": "2026-07-28",
   "isCurrentMember": "Yes",
-  "networth": 264220095.31787,
+  "networth": 264234557.497555,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 210,
   "tradeVolume": 226112239,
@@ -47,16 +47,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2026-07-24",
       "fullName": "INTEL CORPORATION ",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 10,000 Shares"
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
     },
     {
       "symbol": "INTC",
       "transactionType": "Purchase",
       "transactionDate": "2026-07-24",
       "fullName": "INTEL CORPORATION ",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 50 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 10,000 Shares"
     },
     {
       "symbol": "INTC",
@@ -591,16 +591,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2022-05-24",
       "fullName": "MICROSOFT CORPORATION",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 40 Call Options"
+      "amount": "50,001 - 100,000",
+      "description": "Purchased 10 Call Options"
     },
     {
       "symbol": "MSFT",
       "transactionType": "Purchase",
       "transactionDate": "2022-05-24",
       "fullName": "MICROSOFT CORPORATION",
-      "amount": "50,001 - 100,000",
-      "description": "Purchased 10 Call Options"
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 40 Call Options"
     },
     {
       "symbol": "AAPL",
@@ -727,16 +727,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 50 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 5,000 Shares"
     },
     {
       "symbol": "NVDA",
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 5,000 Shares"
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
     },
     {
       "symbol": "MONTGOMERY, AL .2, SCHAUMBERG, IL .1",
@@ -784,7 +784,7 @@
       "transactionDate": "2021-03-19",
       "fullName": "MICROSOFT CORPORATION",
       "amount": "1,000,001 - 5,000,000",
-      "description": "Exercised 150 Call Options"
+      "description": "Exercised 100 Call Options"
     },
     {
       "symbol": "MSFT",
@@ -792,7 +792,7 @@
       "transactionDate": "2021-03-19",
       "fullName": "MICROSOFT CORPORATION",
       "amount": "1,000,001 - 5,000,000",
-      "description": "Exercised 100 Call Options"
+      "description": "Exercised 150 Call Options"
     },
     {
       "symbol": "AB",
@@ -927,16 +927,16 @@
       "transactionType": "Sale",
       "transactionDate": "2020-05-08",
       "fullName": "APPLE INC.",
-      "amount": "1,000,001 - 5,000,000",
-      "description": "Sold 3,300 Shares"
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 1,700 Shares"
     },
     {
       "symbol": "AAPL",
       "transactionType": "Sale",
       "transactionDate": "2020-05-08",
       "fullName": "APPLE INC.",
-      "amount": "500,001 - 1,000,000",
-      "description": "Sold 1,700 Shares"
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 3,300 Shares"
     },
     {
       "symbol": "AAPL",
@@ -1028,6 +1028,22 @@
     },
     {
       "symbol": "AMZN",
+      "transactionType": "Sale",
+      "transactionDate": "2020-01-16",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 20 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Sale",
+      "transactionDate": "2020-01-16",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 20 Call Options"
+    },
+    {
+      "symbol": "AMZN",
       "transactionType": "Purchase",
       "transactionDate": "2020-01-16",
       "fullName": "AMAZON.COM, INC.",
@@ -1035,20 +1051,12 @@
       "description": "Exercised 30 Call Options"
     },
     {
-      "symbol": "AMZN",
-      "transactionType": "Sale",
+      "symbol": "FB",
+      "transactionType": "Purchase",
       "transactionDate": "2020-01-16",
-      "fullName": "AMAZON.COM, INC.",
+      "fullName": "FACEBOOK, INC. ",
       "amount": "250,001 - 500,000",
-      "description": "Sold 20 Call Options"
-    },
-    {
-      "symbol": "AMZN",
-      "transactionType": "Sale",
-      "transactionDate": "2020-01-16",
-      "fullName": "AMAZON.COM, INC.",
-      "amount": "250,001 - 500,000",
-      "description": "Sold 20 Call Options"
+      "description": "Exercised 30 Call Options"
     },
     {
       "symbol": "FB",
@@ -1059,12 +1067,12 @@
       "description": "Exercised 20 Call Options"
     },
     {
-      "symbol": "FB",
-      "transactionType": "Purchase",
-      "transactionDate": "2020-01-16",
-      "fullName": "FACEBOOK, INC. ",
-      "amount": "250,001 - 500,000",
-      "description": "Exercised 30 Call Options"
+      "symbol": "V",
+      "transactionType": "Sale",
+      "transactionDate": "2019-08-07",
+      "fullName": "VISA INC.",
+      "amount": "100,001 - 250,000",
+      "description": "Sale Of 1,000 Shares"
     },
     {
       "symbol": "V",
@@ -1073,14 +1081,6 @@
       "fullName": "VISA INC.",
       "amount": "100,001 - 250,000",
       "description": "Sale Of 1.000 Shares"
-    },
-    {
-      "symbol": "V",
-      "transactionType": "Sale",
-      "transactionDate": "2019-08-07",
-      "fullName": "VISA INC.",
-      "amount": "100,001 - 250,000",
-      "description": "Sale Of 1,000 Shares"
     },
     {
       "symbol": "AMZN",
