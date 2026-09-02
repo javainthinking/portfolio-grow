@@ -2,10 +2,10 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-09-01T20:16:22.713Z",
+  "fetchedAt": "2026-09-02T20:14:44.542Z",
   "lastTrade": "2026-07-28",
   "isCurrentMember": "Yes",
-  "networth": 264234557.497555,
+  "networth": 262873070.853057,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 210,
   "tradeVolume": 226112239,
@@ -16,7 +16,7 @@
       "transactionDate": "2026-07-28",
       "fullName": "BLOOM ENERGY CORPORATION CLASS A COMMON STOCK",
       "amount": "500,001 - 1,000,000",
-      "description": "Purchased 100 Call Options"
+      "description": "Purchased 5,000 Shares"
     },
     {
       "symbol": "BE",
@@ -24,7 +24,7 @@
       "transactionDate": "2026-07-28",
       "fullName": "BLOOM ENERGY CORPORATION CLASS A COMMON STOCK",
       "amount": "500,001 - 1,000,000",
-      "description": "Purchased 5,000 Shares"
+      "description": "Purchased 100 Call Options"
     },
     {
       "symbol": "BE",
@@ -132,19 +132,19 @@
     },
     {
       "symbol": "AAPL",
-      "transactionType": "Sale",
-      "transactionDate": "2025-12-30",
-      "fullName": "APPLE INC. ",
-      "amount": "5,000,001 - 25,000,000",
-      "description": "Contribution Of 28,200 Shares"
-    },
-    {
-      "symbol": "AAPL",
       "transactionType": "Purchase",
       "transactionDate": "2025-12-30",
       "fullName": "APPLE INC. ",
       "amount": "250,001 - 500,000",
       "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-30",
+      "fullName": "APPLE INC. ",
+      "amount": "5,000,001 - 25,000,000",
+      "description": "Contribution Of 28,200 Shares"
     },
     {
       "symbol": "AMZN",
@@ -164,19 +164,19 @@
     },
     {
       "symbol": "GOOGL",
-      "transactionType": "Purchase",
-      "transactionDate": "2025-12-30",
-      "fullName": "ALPHABET INC. ",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 20 Call Options"
-    },
-    {
-      "symbol": "GOOGL",
       "transactionType": "Sale",
       "transactionDate": "2025-12-30",
       "fullName": "ALPHABET INC. ",
       "amount": "1,000,001 - 5,000,000",
       "description": "Contribution Of 7,704 Shares"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Purchase",
+      "transactionDate": "2025-12-30",
+      "fullName": "ALPHABET INC. ",
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 20 Call Options"
     },
     {
       "symbol": "NVDA",
@@ -727,16 +727,16 @@
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "500,001 - 1,000,000",
-      "description": "Purchased 5,000 Shares"
+      "amount": "250,001 - 500,000",
+      "description": "Purchased 50 Call Options"
     },
     {
       "symbol": "NVDA",
       "transactionType": "Purchase",
       "transactionDate": "2021-07-23",
       "fullName": "NVIDIA CORPORATION",
-      "amount": "250,001 - 500,000",
-      "description": "Purchased 50 Call Options"
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 5,000 Shares"
     },
     {
       "symbol": "MONTGOMERY, AL .2, SCHAUMBERG, IL .1",
@@ -927,16 +927,16 @@
       "transactionType": "Sale",
       "transactionDate": "2020-05-08",
       "fullName": "APPLE INC.",
-      "amount": "500,001 - 1,000,000",
-      "description": "Sold 1,700 Shares"
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Sold 3,300 Shares"
     },
     {
       "symbol": "AAPL",
       "transactionType": "Sale",
       "transactionDate": "2020-05-08",
       "fullName": "APPLE INC.",
-      "amount": "1,000,001 - 5,000,000",
-      "description": "Sold 3,300 Shares"
+      "amount": "500,001 - 1,000,000",
+      "description": "Sold 1,700 Shares"
     },
     {
       "symbol": "AAPL",
@@ -1036,19 +1036,19 @@
     },
     {
       "symbol": "AMZN",
-      "transactionType": "Sale",
-      "transactionDate": "2020-01-16",
-      "fullName": "AMAZON.COM, INC.",
-      "amount": "250,001 - 500,000",
-      "description": "Sold 20 Call Options"
-    },
-    {
-      "symbol": "AMZN",
       "transactionType": "Purchase",
       "transactionDate": "2020-01-16",
       "fullName": "AMAZON.COM, INC.",
       "amount": "1,000,001 - 5,000,000",
       "description": "Exercised 30 Call Options"
+    },
+    {
+      "symbol": "AMZN",
+      "transactionType": "Sale",
+      "transactionDate": "2020-01-16",
+      "fullName": "AMAZON.COM, INC.",
+      "amount": "250,001 - 500,000",
+      "description": "Sold 20 Call Options"
     },
     {
       "symbol": "FB",
