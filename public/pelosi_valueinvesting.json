@@ -2,14 +2,22 @@
   "ok": true,
   "source": "https://valueinvesting.io/get_pelosi",
   "page": "https://valueinvesting.io/nancy-pelosi-stock-trades-tracker",
-  "fetchedAt": "2026-09-10T20:12:02.512Z",
+  "fetchedAt": "2026-09-11T20:11:22.497Z",
   "lastTrade": "2026-07-28",
   "isCurrentMember": "Yes",
-  "networth": 261816960.864484,
+  "networth": 261577762.674332,
   "houseInfo": "Democratic / House / California",
   "totalTrades": 210,
   "tradeVolume": 226112239,
   "trades": [
+    {
+      "symbol": "BE",
+      "transactionType": "Purchase",
+      "transactionDate": "2026-07-28",
+      "fullName": "BLOOM ENERGY CORPORATION CLASS A COMMON STOCK",
+      "amount": "500,001 - 1,000,000",
+      "description": "Purchased 100 Call Options"
+    },
     {
       "symbol": "BE",
       "transactionType": "Purchase",
@@ -21,9 +29,9 @@
     {
       "symbol": "BE",
       "transactionType": "Purchase",
-      "transactionDate": "2026-07-28",
+      "transactionDate": "2026-07-24",
       "fullName": "BLOOM ENERGY CORPORATION CLASS A COMMON STOCK",
-      "amount": "500,001 - 1,000,000",
+      "amount": "1,000,001 - 5,000,000",
       "description": "Purchased 100 Call Options"
     },
     {
@@ -33,14 +41,6 @@
       "fullName": "BLOOM ENERGY CORPORATION CLASS A COMMON STOCK",
       "amount": "1,000,001 - 5,000,000",
       "description": "Purchased 10,000 Shares"
-    },
-    {
-      "symbol": "BE",
-      "transactionType": "Purchase",
-      "transactionDate": "2026-07-24",
-      "fullName": "BLOOM ENERGY CORPORATION CLASS A COMMON STOCK",
-      "amount": "1,000,001 - 5,000,000",
-      "description": "Purchased 100 Call Options"
     },
     {
       "symbol": "INTC",
@@ -132,19 +132,19 @@
     },
     {
       "symbol": "AAPL",
-      "transactionType": "Sale",
-      "transactionDate": "2025-12-30",
-      "fullName": "APPLE INC. ",
-      "amount": "5,000,001 - 25,000,000",
-      "description": "Contribution Of 28,200 Shares"
-    },
-    {
-      "symbol": "AAPL",
       "transactionType": "Purchase",
       "transactionDate": "2025-12-30",
       "fullName": "APPLE INC. ",
       "amount": "250,001 - 500,000",
       "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "AAPL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-30",
+      "fullName": "APPLE INC. ",
+      "amount": "5,000,001 - 25,000,000",
+      "description": "Contribution Of 28,200 Shares"
     },
     {
       "symbol": "AMZN",
@@ -164,19 +164,19 @@
     },
     {
       "symbol": "GOOGL",
-      "transactionType": "Sale",
-      "transactionDate": "2025-12-30",
-      "fullName": "ALPHABET INC. ",
-      "amount": "1,000,001 - 5,000,000",
-      "description": "Contribution Of 7,704 Shares"
-    },
-    {
-      "symbol": "GOOGL",
       "transactionType": "Purchase",
       "transactionDate": "2025-12-30",
       "fullName": "ALPHABET INC. ",
       "amount": "250,001 - 500,000",
       "description": "Purchased 20 Call Options"
+    },
+    {
+      "symbol": "GOOGL",
+      "transactionType": "Sale",
+      "transactionDate": "2025-12-30",
+      "fullName": "ALPHABET INC. ",
+      "amount": "1,000,001 - 5,000,000",
+      "description": "Contribution Of 7,704 Shares"
     },
     {
       "symbol": "NVDA",
@@ -1056,7 +1056,7 @@
       "transactionDate": "2020-01-16",
       "fullName": "FACEBOOK, INC. ",
       "amount": "250,001 - 500,000",
-      "description": "Exercised 30 Call Options"
+      "description": "Exercised 20 Call Options"
     },
     {
       "symbol": "FB",
@@ -1064,7 +1064,7 @@
       "transactionDate": "2020-01-16",
       "fullName": "FACEBOOK, INC. ",
       "amount": "250,001 - 500,000",
-      "description": "Exercised 20 Call Options"
+      "description": "Exercised 30 Call Options"
     },
     {
       "symbol": "V",
